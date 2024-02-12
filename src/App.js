@@ -1,6 +1,9 @@
 import './sass/main.scss';
 import { useState } from 'react';
-import Overview from "./components/Overview";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import WorkHistory from "./components/WorkHistory";
+import Contact from "./components/Contact";
 
 function App() {
   const [component, setComponent] = useState(0);
@@ -21,20 +24,24 @@ function App() {
           <nav className="navigation">
             <ul className="navigation__list">
               <li className="navigation__item">
-                <button className="navigation__button" onClick={() => handleClick(1)}>One</button>
-                {(component===1) ? <h1>hehehehe</h1> : null}
+                <button className="navigation__button" onClick={() => handleClick(1)}>About Me</button>
               </li>
               <li className="navigation__item">
-                <button className="navigation__button" onClick={() => handleClick(2)}>Two</button>
-                {(component===2) ? <h1>hohohoho</h1> : null}
+                <button className="navigation__button" onClick={() => handleClick(2)}>Projects</button>
               </li>
               <li className="navigation__item">
-                <button className="navigation__button" onClick={() => handleClick(3)}>Three</button>
+                <button className="navigation__button" onClick={() => handleClick(3)}>Work History</button>
+              </li>
+              <li className="navigation__item">
+                <button className="navigation__button" onClick={() => handleClick(4)}>Contact Me</button>
               </li>
             </ul>
           </nav>
           <div className="overview">
-            {(component===3) ? <Overview /> : null}
+            {(component===1) ? <AboutMe /> : null}
+            {(component===2) ? <Projects /> : null}
+            {(component===3) ? <WorkHistory /> : null}
+            {(component===4) ? <Contact /> : null}
           </div>
         </main>
       </div>

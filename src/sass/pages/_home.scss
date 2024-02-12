@@ -8,5 +8,7 @@
     width: 70%;
     height: 80vh;
     margin: 10vh 0 0 2rem;
-    border: 1px solid white;
+    border: 4rem outset $color-blue;
+    background-color: $color-grey-dark-3;
+    color: white;
 }
