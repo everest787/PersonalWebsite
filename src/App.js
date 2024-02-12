@@ -1,5 +1,6 @@
 import './sass/main.scss';
 import { useState } from 'react';
+import Overview from "./components/Overview";
 
 function App() {
   const [component, setComponent] = useState(0);
@@ -30,7 +31,7 @@ function App() {
                 </li>
                 <li className="navigation__item">
                   <button onClick={() => handleClick(3)}>Three</button>
-                  {(component===3) ? <h1>hihihihi</h1> : null}
+                  {(component===3) ? <Overview /> : null}
                 </li>
               </ul>
             </nav>
