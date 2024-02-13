@@ -1,0 +1,32 @@
+.aboutme {
+    width: 100%;
+    height: 100%;
+    background-color: $color-light-green;
+    box-shadow:
+        inset #0f2b0b 0 0 0 7px, /*5*/
+        inset #164010 0 0 0 8px, /*1*/
+        inset #1d5416 0 0 0 13px, /*10*/
+        inset #24681b 0 0 0 15px, /*11*/
+        inset #39a52b 0 0 0 22px, /*16*/
+        inset #2b7c20 0 0 0 23px, /*17*/
+        inset #caf0c6 0 0 0 30px, /*21*/
+        inset #a5e59d 0 0 0 31px;/*22*/
+    
+    &__content {
+        padding: 4rem;
+
+    }
+
+    &__heading {
+
+    }
+
+    &__desc-container {
+
+    }
+
+    &__description {
+
+    }
+
+}
