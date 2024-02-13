@@ -1,0 +1,32 @@
+.workhistory {
+    width: 100%;
+    height: 100%;
+    background-color: $color-light-blue;
+    box-shadow:
+        inset #0b0f2b 0 0 0 7px, /*5*/
+        inset #101640 0 0 0 8px, /*1*/
+        inset #161d54 0 0 0 13px, /*10*/
+        inset #1b2468 0 0 0 15px, /*11*/
+        inset #2b39a5 0 0 0 22px, /*16*/
+        inset #202b7c 0 0 0 23px, /*17*/
+        inset #c6caf0 0 0 0 30px, /*21*/
+        inset #9da5e5 0 0 0 31px;/*22*/
+    
+    &__content {
+        padding: 4rem;
+
+    }
+
+    &__heading {
+
+    }
+
+    &__desc-container {
+
+    }
+
+    &__description {
+
+    }
+
+}

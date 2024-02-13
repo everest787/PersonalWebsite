@@ -1,0 +1,32 @@
+.contact {
+    width: 100%;
+    height: 100%;
+    background-color: $color-light-red;
+    box-shadow:
+        inset #2b0b0f 0 0 0 7px, /*5*/
+        inset #401016 0 0 0 8px, /*1*/
+        inset #54161d 0 0 0 13px, /*10*/
+        inset #681b24 0 0 0 15px, /*11*/
+        inset #a52b39 0 0 0 22px, /*16*/
+        inset #7c202b 0 0 0 23px, /*17*/
+        inset #f0c6ca 0 0 0 30px, /*21*/
+        inset #e59da5 0 0 0 31px;/*22*/
+    
+    &__content {
+        padding: 4rem;
+
+    }
+
+    &__heading {
+
+    }
+
+    &__desc-container {
+
+    }
+
+    &__description {
+
+    }
+
+}
