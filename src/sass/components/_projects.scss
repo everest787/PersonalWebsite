@@ -14,11 +14,19 @@
     
     &__content {
         padding: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
     }
 
     &__heading {
+        color: $color-light-purple;
+        transform: translate(-4rem, -6rem);
+        position: absolute;
+    }
 
+    &__research {
+        padding-left: 1.5rem;
     }
 
     &__desc-container {
