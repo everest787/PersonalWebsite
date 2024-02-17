@@ -14,19 +14,70 @@
     
     &__content {
         padding: 4rem;
+        height: 100%;
 
     }
 
     &__heading {
+        color: $color-light-blue;
+        transform: translate(-4rem, -6rem);
+        position: absolute;
 
+    }
+    &__technologies {
+
+        &__text {
+            position: absolute;
+            transform: translateX(-25%) translateY(200%) rotate(-90deg);
+        }
+    }
+
+    &__title {
+
+    }
+
+    &__job-desc {
+        padding-left: 1.5rem;
+
+        &__item {
+
+        }
+    }
+    &__stacklist {
+        padding-left: 1.5rem;
+        list-style-type: none;
+
+        &__item {
+
+        }
     }
 
     &__desc-container {
+        height: 100%;
+        display: grid;
+        grid-template-areas:    "job1 technologies job1-stack"
+                                "job2 technologies job2-stack"
+                                "job3 technologies job3-stack";
+        grid-template-columns: 6fr 0.5fr 2fr;
 
     }
 
-    &__description {
-
+    &__job1 {
+        grid-area: job1;
     }
-
+    &__job2 {
+        grid-area: job2;
+    }
+    &__job3 {
+        grid-area: job3;
+    }
+    &__job1-stack {
+        grid-area: job1-stack;
+    }
+    &__job2-stack {
+        grid-area: job2-stack;
+    }
+    &__job3-stack {
+        grid-area: job3-stack;
+    }
 }
