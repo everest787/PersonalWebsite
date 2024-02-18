@@ -1,4 +1,15 @@
+import { useState } from 'react';
 function Projects() { 
+    const [component, setComponent] = useState(0);
+
+    function handleClick(value) {
+      if (component === value){
+        setComponent(0);
+      }
+      else{
+        setComponent(value);
+      }
+    }
     return ( 
         <div className="projects">
             <div className="projects__content">
@@ -41,9 +52,9 @@ function Projects() {
                 <div className="projects__webscraper">
                     <h2 className="projects__title">Web Scraper</h2>
                     <h3 className="projects__description">Scrapy and Playwright with Python</h3>
-                    <div className="projects__webscraper__phase1">
-                        <button className="projects__webscraper__button">Phase 1</button>
-                        <ul className="projects__webscraper__list">
+                    <div className={"projects__webscraper__phase projects__webscraper__phase1 " + ((component===1) ? "active" : "inactive")}>
+                        <button className="projects__webscraper__button" onClick={() => handleClick(1)}>Phase 1</button>
+                        <ul className={"projects__webscraper__list " + ((component===1) ? "visible" : "hidden")}>
                             <li>
                             Scrape publicly available data through proxies
                             </li>
@@ -58,9 +69,9 @@ function Projects() {
                             </li>
                         </ul>
                     </div>
-                    <div className="projects__webscraper__phase2">
-                        <button className="projects__webscraper__button">Phase 2</button>
-                        <ul className="projects__webscraper__list">
+                    <div className={"projects__webscraper__phase projects__webscraper__phase2 " + ((component===2) ? "active" : "inactive")}>
+                        <button className="projects__webscraper__button" onClick={() => handleClick(2)}>Phase 2</button>
+                        <ul className={"projects__webscraper__list " + ((component===2) ? "visible" : "hidden")}>
                             <li>
                             Data saved to database hosted on server (maybe AWS)
                             </li>
@@ -72,9 +83,9 @@ function Projects() {
                             </li>
                         </ul>
                     </div>
-                    <div className="projects__webscraper__phase3">
-                        <button className="projects__webscraper__button">Phase 3</button>
-                        <ul className="projects__webscraper__list">
+                    <div className={"projects__webscraper__phase projects__webscraper__phase3 " + ((component===3) ? "active" : "inactive")}>
+                        <button className="projects__webscraper__button" onClick={() => handleClick(3)}>Phase 3</button>
+                        <ul className={"projects__webscraper__list " + ((component===3) ? "visible" : "hidden")}>
                             <li>
                             Website Authenticiation and more personalized filtering
                             </li>

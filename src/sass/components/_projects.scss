@@ -16,6 +16,7 @@
         padding: 4rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        height: 100%;
 
     }
 
@@ -29,12 +30,67 @@
         padding-left: 1.5rem;
     }
 
-    &__desc-container {
+    &__description {
 
     }
 
-    &__description {
+    &__webscraper {
+        overflow: hidden;
+        height: 100%;
+        position: relative;
 
+        &__button {
+            background-color: transparent;
+            border: 2px solid #1A1A1A;
+            color: #3B3B3B;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            text-align: center;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            width: 100%;
+            min-height: 6rem;
+        }
+
+        &__button:hover {
+            color: #fff;
+            background-color: #1A1A1A;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        }
+
+        &__button:active {
+            box-shadow: none;
+        }
+
+        &__phase {
+            width: 100%;
+            position: absolute;
+
+            &.active {
+                color: red;
+                top: 5rem;
+            }
+        }
+        
+        &__phase1 {
+            bottom: 12.2rem;
+        }
+        &__phase2 {
+            bottom: 6.1rem;
+        }
+        &__phase3 {
+            bottom: 0%;
+
+        }
+
+        &__list {
+
+            &.hidden {
+                height: 0;
+                width: 0;
+                overflow: hidden;
+            }
+        }
     }
 
 }
