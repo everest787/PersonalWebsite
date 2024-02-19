@@ -14,19 +14,53 @@
     
     &__content {
         padding: 4rem;
-
+        height: 100%;
     }
-
     &__heading {
+        color: $color-light-green;
+        transform: translate(-4rem, -6rem);
+        position: absolute;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 100%;
+    }
+    &__section {
+        text-align: center;
+
+        &__heading {
+            padding: 25% 10%;
+        }
 
     }
-
-    &__desc-container {
-
+    &__section1 {
+        
     }
-
-    &__description {
-
+    &__section2 {
+        
+    }
+    &__section3 {
+        
+    }
+    &__section4 {
+        
+    }
+    &__section5 {
+        
+    }
+    &__section6 {
+        
+    }
+    &__section7 {
+        
+    }
+    &__section8 {
+        
+    }
+    &__section9 {
+        
     }
 
 }
