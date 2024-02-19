@@ -22,8 +22,10 @@
 
     &__heading {
         color: $color-light-purple;
-        transform: translate(-4rem, -6rem);
+        transform: translate(-4rem, -6.5rem);
         position: absolute;
+        font-family: "PixelifySans";
+        font-size: 2rem;
     }
 
     &__research {

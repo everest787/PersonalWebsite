@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'JosefinSans';
     font-weight: 400;
     line-height: 1.7;
     color: $color-grey-dark-3;
@@ -7,6 +7,12 @@ body {
 @font-face {
     font-family: 'PixelifySans';
     src: local('PixelifySans'), url("../../fonts/PixelifySans-VariableFont_wght.ttf") format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+@font-face {
+    font-family: 'JosefinSans';
+    src: local('JosefinSans'), url("../../fonts/JosefinSans-VariableFont_wght.ttf") format('truetype');
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
 }

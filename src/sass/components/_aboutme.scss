@@ -18,8 +18,10 @@
     }
     &__heading {
         color: $color-light-green;
-        transform: translate(-4rem, -6rem);
+        transform: translate(-4rem, -6.5rem);
         position: absolute;
+        font-family: "PixelifySans";
+        font-size: 2rem;
     }
     &__container {
         display: grid;
