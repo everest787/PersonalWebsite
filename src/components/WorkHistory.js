@@ -44,7 +44,7 @@ function WorkHistory() {
                 </div>
 
                 <div className="workhistory__technologies">
-                    <h2 className="workhistory__technologies__text">Technologies</h2>
+                    <h2 className="workhistory__technologies__text">Ingredients</h2>
                 </div>
                     
                 <div className="workhistory__job1-stack">
