@@ -1,3 +1,8 @@
+import maya from '../img/PuppoHatesStudying.jpg';
+import besties from '../img/MeAndMaya.jpg';
+import winter from '../img/WinterLandscape.jpg';
+import autumn from '../img/AutumnLandscapeMaya.jpg';
+
 function AboutMe() { 
     return (  
         <div className="aboutme">
@@ -5,9 +10,9 @@ function AboutMe() {
                 <h2 className="aboutme__heading">About Me</h2>
                 <div className="aboutme__container">
                     <div className="aboutme__section aboutme__section1">
-                        <h3 className="aboutme__section__heading">
-                            My favourite colour is green
-                        </h3>
+                        <figure className="aboutme__figure">
+                            <img src={maya} alt="Dog" className="aboutme__photo"/>
+                        </figure>
                     </div>
                     <div className="aboutme__section aboutme__section2">
                         <h3 className="aboutme__section__heading">
@@ -15,9 +20,9 @@ function AboutMe() {
                         </h3>
                     </div>
                     <div className="aboutme__section aboutme__section3">
-                        <h3 className="aboutme__section__heading">
-                            Spring is my favourite season
-                        </h3>
+                        <figure className="aboutme__figure">
+                            <img src={besties} alt="Maya and I" className="aboutme__photo"/>
+                        </figure>
                     </div>
                     <div className="aboutme__section aboutme__section4">
                         <h3 className="aboutme__section__heading">
@@ -35,19 +40,19 @@ function AboutMe() {
                         </h3>
                     </div>
                     <div className="aboutme__section aboutme__section7">
-                        <h3 className="aboutme__section__heading">
-                            Mint ice cream isn't very good
-                        </h3>
+                        <figure className="aboutme__figure">
+                            <img src={winter} alt="Winter Landscape" className="aboutme__photo"/>
+                        </figure>
                     </div>
                     <div className="aboutme__section aboutme__section8">
                         <h3 className="aboutme__section__heading">
-                            I enjoy listening to music (Alternative, Rock, Indie, and Pop mainly)
+                            I enjoy hiking and nature photography
                         </h3>
                     </div>
                     <div className="aboutme__section aboutme__section9">
-                        <h3 className="aboutme__section__heading">
-                            Ketchup on Kraft Dinner is good actually
-                        </h3>
+                        <figure className="aboutme__figure">
+                            <img src={autumn} alt="Autumn" className="aboutme__photo"/>
+                        </figure>
                     </div>
                 </div>
             </div>
