@@ -15,43 +15,53 @@ function Projects() {
             <div className="projects__content">
                 <h2 className="projects__heading">Projects</h2>
                 <div className="projects__projects">
-                    <h2 className="projects__title">This Website + My Old Website</h2>
-                    <div className="projects__tech">
-                        <h3>React</h3>
+                    <div className="projects__project">
+                        <h2 className="projects__title">This Website + My Old Website</h2>
+                        <div className="projects__tech">
+                            <h3>React</h3>
+                        </div>
+                        <ul className="projects__description">
+                            <li>
+                                Continuously designing and enhancing a personal React-based website to serve as a professional portfolio.
+                            </li>
+                            <li>
+                                This new version of the website is new, so please forgive any weirdness that I have yet to wrinkle out.
+                            </li>
+                        </ul>
                     </div>
-                    <ul className="projects__description">
-                        <li>
-                            Stuff
-                        </li>
-                    </ul>
 
                     <h2 className="projects__title">Topics I'm Researching</h2>
                     <div className="projects__research">
-                        <h2 className="projects__title">DevOps</h2>
-                        <div className="projects__tech">
-                            <h3>AWS</h3>
+                        <div className="projects__project">
+                            <h2 className="projects__title">DevOps</h2>
+                            <div className="projects__tech">
+                                <h3>AWS</h3>
+                            </div>
+                            <ul className="projects__description">
+                                <li>
+                                    Studying AWS and DevOps to support future projects, including server hosting and data pipeline management for my current personal website.
+                                </li>
+                            </ul>
                         </div>
-                        <ul className="projects__description">
-                            <li>
-                                Stuff
-                            </li>
-                        </ul>
 
-                        <h2 className="projects__title">Machine Learning</h2>
-                        <div className="projects__tech">
-                            <h3>Python</h3>
+                        <div className="projects__project">
+                            <h2 className="projects__title">Machine Learning</h2>
+                            <div className="projects__tech">
+                                <h3>Python</h3>
+                            </div>
+                            <ul className="projects__description">
+                                <li>
+                                    Passionately studying machine learning for future project integration.
+                                </li>
+                            </ul>
                         </div>
-                        <ul className="projects__description">
-                            <li>
-                                Stuff
-                            </li>
-                        </ul>
                     </div>
                     
                 </div>
                 <div className="projects__webscraper">
-                    <h2 className="projects__title">Web Scraper</h2>
-                    <h3 className="projects__description">Scrapy and Playwright with Python</h3>
+                    <h2 className="projects__webscraper__title">Web Scraper</h2>
+                    <h3 className="projects__webscraper__subtitle">Scrapy and Playwright with Python</h3>
+                    <h3 className={"projects__webscraper__description " + ((component===0) ? "visible" : "hidden")}>Developing a Python-based web scraper for efficient data gathering, filtering, and organizing.</h3>
                     <div className={"projects__webscraper__phase projects__webscraper__phase1 " + ((component===1) ? "active" : "inactive")}>
                         <button className="projects__webscraper__button" onClick={() => handleClick(1)}>Phase 1</button>
                         <ul className={"projects__webscraper__list " + ((component===1) ? "visible" : "hidden")}>
