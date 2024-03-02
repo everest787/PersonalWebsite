@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <div className="container">
         <main className="content">
-          <nav className="navigation">
+          <nav className={"navigation " + ((component===0) ? "navigation__closed" : "navigation__opened")}>
             <ul className="navigation__list">
               <li className="navigation__item">
                 <button className="navigation__button" onClick={() => handleClick(1)}>About Me</button>

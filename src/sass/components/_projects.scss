@@ -18,10 +18,22 @@
         grid-template-columns: 1fr 1fr;
         height: 100%;
         font-size: 1.55rem;
+        @include respond(tab-land) { 
+            font-size: 1.4rem;
+        }
+        @include respond(tab-port) { 
+            font-size: 1.3rem;
+        }
+        @include respond(phone) { 
+            grid-template-columns: 3fr 2fr;
+        }
 
     }
 
     &__title {
+        @include respond(phone) { 
+            font-size: 1.4rem;
+        }
     }
 
     &__heading {
@@ -58,6 +70,9 @@
         margin-bottom: 2rem;
         margin-right: 1rem;
         padding-left: 2rem;
+        @include respond(tab-port) { 
+            margin-bottom: .5rem;
+        }
 
     }
 
@@ -67,6 +82,9 @@
         position: relative;
         margin-left: 1rem;
         font-size: 2rem;
+        @include respond(tab-port) { 
+            font-size: 1.5rem;
+        }
 
         &__button {
             background-color: transparent;
@@ -82,14 +100,24 @@
         }
 
         &__title {
+            @include respond(phone) { 
+                font-size: 2rem;
+            }
 
         }
         &__subtitle {
+            @include respond(phone) { 
+                font-size: 1.5rem;
+            }
             
         }
         &__description {
             font-weight: 400;
             padding: 2rem 0 0 2rem;
+            @include respond(phone) { 
+                padding: 1rem 0 0 1rem;
+                font-size: 1.3rem;
+            }
 
             &.hidden {
                 height: 0;
@@ -120,9 +148,21 @@
         
         &__phase1 {
             bottom: 12.2rem;
+            @include respond(tab-port) { 
+                bottom: 14rem;
+            }
+            @include respond(phone) { 
+                bottom: 30%;
+            }
         }
         &__phase2 {
             bottom: 6.1rem;
+            @include respond(tab-port) { 
+                bottom: 7rem;
+            }
+            @include respond(phone) { 
+                bottom: 15%;
+            }
         }
         &__phase3 {
             bottom: 0%;

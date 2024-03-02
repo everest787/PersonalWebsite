@@ -58,6 +58,11 @@
             color: $color-grey-dark-3;
             font-size: 2rem;
             font-weight: 700;
+
+            
+            @include respond(tab-port) { 
+                font-size: 1.5rem;
+            }
         }
 
     }

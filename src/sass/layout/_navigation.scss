@@ -3,11 +3,71 @@
     height: 80vh;
     margin: 10vh 0 0 2rem;
 
+    @include respond(tab-port) { 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__opened {
+        @include respond(tab-port) { 
+            margin: 5vh 0 0;
+            height: 10vh;
+
+            & ul {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+    
+            & li {
+                padding: 0 4rem;
+            }
+            & button {
+                font-size: 2rem;
+            }
+        }
+        @include respond(phone) { 
+            & li {
+                padding: 0 2rem;
+            }
+            & button {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &__closed {
+        @include respond(tab-port) { 
+            margin: 5vh 0 0;
+
+            & ul {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+    
+            & li {
+                padding: 0 4rem;
+            }
+            & button {
+                font-size: 2rem;
+            }
+        }
+        @include respond(phone) { 
+            & li {
+                padding: 0 2rem;
+            }
+            & button {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
     &__list {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        list-style: none;
 
     }
     &__item{
@@ -25,5 +85,6 @@
         font-family: "PixelifySans";
         font-size: 3rem;
         font-weight: bold;
+
     }
 }
