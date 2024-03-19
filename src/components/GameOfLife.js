@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 function GameOfLife() { 
     var rows = Math.floor((window.innerHeight - 20) / 10);
@@ -20,13 +20,9 @@ function GameOfLife() {
         resetGrids();
     }
 
-        // Lay out the board
+    // Lay out the board
     function createTable() {
         var gridContainer = document.getElementById('gridContainer');
-        if (!gridContainer) {
-            // Throw error
-            console.error("Problem: No div for the drid table!");
-        }
         var table = document.createElement("table");
         
         for (var i = 0; i < rows; i++) {
@@ -99,11 +95,8 @@ function GameOfLife() {
     }
 
     function randomButtonHandler() {
-        console.log(playing)
         if (playing) return;
         clearButtonHandler();
-        console.log(rows)
-        console.log(cols)
         for (var i = 0; i < rows; i++) {
             for (var j = 0; j < cols; j++) {
                 var isLive = Math.round(Math.random());
