@@ -1,7 +1,10 @@
 .content {
+    position: relative;
     width: 100%;
     margin: 0 auto;
     display: flex;
+    z-index: 10;
+    pointer-events: none;
     @include respond(tab-port) { 
         display: inline-block;
     }
@@ -10,6 +13,7 @@
     width: 70%;
     height: 80vh;
     margin: 10vh 0 0 2rem;
+    pointer-events: none;
 
     @include respond(tab-port) { 
         width: 95%;
