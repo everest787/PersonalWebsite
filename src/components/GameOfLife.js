@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 function GameOfLife() { 
-    var rows = Math.floor((window.innerHeight - 20) / 10);
+    var rows = Math.floor((window.innerHeight - 40) / 20);
     var cols = Math.floor((window.innerWidth - 20) / 10);
 
     var playing = false;
@@ -15,8 +15,6 @@ function GameOfLife() {
 
     // Initialize
     function initialize() {
-        console.log(window.innerHeight)
-        console.log(window.innerWidth)
         createTable();
         initializeGrids();
         resetGrids();
