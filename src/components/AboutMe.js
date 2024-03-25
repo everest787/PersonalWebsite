@@ -6,6 +6,10 @@ import autumn from '../img/AutumnLandscapeMaya.jpg';
 function AboutMe() { 
     return (  
         <div className="aboutme">
+            <div class="aboutme__line aboutme__line--top"></div>
+            <div class="aboutme__line aboutme__line--right"></div>
+            <div class="aboutme__line aboutme__line--bottom"></div>
+            <div class="aboutme__line aboutme__line--left"></div>
             <div className="aboutme__content">
                 <h2 className="aboutme__heading">About Me</h2>
                 <div className="aboutme__container">

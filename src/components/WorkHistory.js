@@ -1,6 +1,10 @@
 function WorkHistory() { 
     return (  
         <div className="workhistory">
+            <div class="workhistory__line workhistory__line--top"></div>
+            <div class="workhistory__line workhistory__line--right"></div>
+            <div class="workhistory__line workhistory__line--bottom"></div>
+            <div class="workhistory__line workhistory__line--left"></div>
             <div className="workhistory__content">
                 <h2 className="workhistory__heading">Work History</h2>
                 <div className="workhistory__desc-container">

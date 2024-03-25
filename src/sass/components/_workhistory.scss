@@ -3,18 +3,11 @@
     height: 100%;
     background-color: $color-light-blue;
     pointer-events: auto;
-    box-shadow:
-        inset #0b0f2b 0 0 0 7px, /*5*/
-        inset #101640 0 0 0 8px, /*1*/
-        inset #161d54 0 0 0 13px, /*10*/
-        inset #1b2468 0 0 0 15px, /*11*/
-        inset #2b39a5 0 0 0 22px, /*16*/
-        inset #202b7c 0 0 0 23px, /*17*/
-        inset #c6caf0 0 0 0 30px, /*21*/
-        inset #9da5e5 0 0 0 31px;/*22*/
+    position: relative;
+    @include border(black, 1.8rem);
     
     &__content {
-        padding: 4rem;
+        padding: 1.6rem;
         height: 100%;
         font-size: 1.7rem;
         @include respond(tab-land) { 
@@ -28,7 +21,7 @@
 
     &__heading {
         color: $color-light-blue;
-        transform: translate(-4rem, -6.5rem);
+        transform: translate(0, -5.8rem);
         position: absolute;
         font-family: "PixelifySans";
         font-size: 2rem;
