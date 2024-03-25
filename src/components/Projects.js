@@ -12,6 +12,10 @@ function Projects() {
     }
     return ( 
         <div className="projects">
+            <div className="projects__line projects__line--top"></div>
+            <div className="projects__line projects__line--right"></div>
+            <div className="projects__line projects__line--bottom"></div>
+            <div className="projects__line projects__line--left"></div>
             <div className="projects__content">
                 <h2 className="projects__heading">Projects</h2>
                 <div className="projects__projects">

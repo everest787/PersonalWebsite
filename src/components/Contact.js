@@ -1,6 +1,10 @@
 function Contact() { 
     return (  
         <div className="contact">
+            <div className="contact__line contact__line--top"></div>
+            <div className="contact__line contact__line--right"></div>
+            <div className="contact__line contact__line--bottom"></div>
+            <div className="contact__line contact__line--left"></div>
             <div className="contact__content">
                 <h2 className="contact__heading">Contact Me</h2>
                 <div className="contact__desc-container">

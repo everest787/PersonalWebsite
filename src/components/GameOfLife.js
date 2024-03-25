@@ -58,7 +58,7 @@ function GameOfLife() {
         catch(e){
             console.log(e)
             console.log("Rows: " + rows + " Cols: " + cols)
-            console.log("Grid: " + grid + " length: "+ grid.length)
+            console.log("Grid: " + grid[0] + " length: "+ grid.length)
 
         }
     }
@@ -74,7 +74,6 @@ function GameOfLife() {
 
     function cellClickHandler(){
         var rowcol = this.getAttribute("id").split("_");
-        console.log(rowcol)
         var row = rowcol[0];
         var col = rowcol[1];
         

@@ -36,8 +36,8 @@
             height: 6rem;
             background-color: $color-grey-light-2;
             border-radius: 2.5rem;
-            box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
-            color: #121212;
+            box-shadow: transparent 0 0 0 3px,$color-grey-dark-3 0 6px 20px;
+            color: black;
             cursor: pointer;
             transition: box-shadow .2s;
             border: 0;

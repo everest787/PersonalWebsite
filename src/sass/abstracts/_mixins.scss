@@ -10,6 +10,59 @@
     }
 }
 
+@mixin border($color, $line-width) {
+    &__line {
+        position: absolute;
+        background: $color;
+        &--top,
+        &--bottom {
+            height: $line-width;
+            width: 100%;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: $line-width;
+                height: $line-width; 
+                background: $color;
+            }
+        }
+        &--top {
+            top: -$line-width;
+            &::before {
+                left: 0;
+                bottom: -$line-width;      
+            }
+            &::after {
+                right: 0;
+                bottom: -$line-width;
+            }
+        }
+        &--bottom {
+            bottom: -$line-width;
+            &::before {
+                left: 0;
+                top: -$line-width;      
+            }
+            &::after {
+                right: 0;
+                top: -$line-width;
+            }
+        }
+        &--left,
+        &--right {
+            width: $line-width;
+            height: 100%;
+        }
+        &--left {
+            left: -$line-width;
+        }
+        &--right {
+            right: -$line-width;
+        }
+    }
+}
+
 // MEDIA QUERY MANAGER
 
 /*
