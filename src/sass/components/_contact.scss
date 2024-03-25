@@ -1,10 +1,10 @@
 .contact {
     width: 100%;
     height: 100%;
-    background-color: $color-light-red;
+    background-color: $component-secondary;
     pointer-events: auto;
     position: relative;
-    @include border(black, 1.8rem);
+    @include border($contact-primary, 1.8rem);
     
     &__content {
         padding: 1.6rem;
@@ -13,7 +13,7 @@
     }
 
     &__heading {
-        color: $color-light-red;
+        color: $component-secondary;
         transform: translate(0, -5.8rem);
         position: absolute;
         font-family: "PixelifySans";

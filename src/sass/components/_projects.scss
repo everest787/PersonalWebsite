@@ -1,10 +1,10 @@
 .projects {
     width: 100%;
     height: 100%;
-    background-color: $color-light-purple;
+    background-color: $component-secondary;
     pointer-events: auto;
     position: relative;
-    @include border(black, 1.8rem);
+    @include border($projects-primary, 1.8rem);
     
     &__content {
         padding: 1.6rem;
@@ -31,7 +31,7 @@
     }
 
     &__heading {
-        color: $color-light-purple;
+        color: $component-secondary;
         transform: translate(0, -5.8rem);
         position: absolute;
         font-family: "PixelifySans";
@@ -40,7 +40,8 @@
 
     &__tech {
         border: 1px solid $color-grey-dark-2;
-        background-color: #ecc6f0;
+        background-color: $projects-primary;
+        color: $component-secondary;
         margin-right: 2rem;
         font-size: 1.2rem;
         line-height: 1.6rem;
@@ -48,10 +49,10 @@
     }
 
     &__projects {
-        border-right: 1rem solid #972ba5;
+        border-right: 1rem solid $projects-primary;
     }
     &__project {
-        border-left: 1px solid #ecc6f0;
+        border-left: 1px solid $projects-primary;
         padding-left: .5rem;
     }
 
