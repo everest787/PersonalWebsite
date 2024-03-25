@@ -11,4 +11,4 @@ https://codepen.io/RBSpatz/pen/rLyNLb
 I had to make some alterations to make it work / look the way I wanted to, but I'm grateful for the code available online!
 
 ### Bugs
-There is a bug in the Game of Life that very occasionally, when clearing the board it will give an array not defined error. I'm still looking it to it.
+There is a bug in the Game of Life that when the component is open, the grid for the game becomes undefined. I'm still working on figuring out why. 
