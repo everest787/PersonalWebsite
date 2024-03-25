@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
 function GameOfLife() { 
-    var rows = Math.floor((window.innerHeight - 20) / 10);
-    var cols = Math.floor((window.innerWidth - 20) / 10);
+    var rows = Math.floor((window.innerHeight - 60) / 20);
+    var cols = Math.floor((window.innerWidth - 20) / 20);
 
     var playing = false;
 
@@ -226,9 +226,15 @@ function GameOfLife() {
             </div>
             
             <div className="controls">
-                <button id="start" onClick={() => startButtonHandler()}><span>Start</span></button>
-                <button id="clear" onClick={() => clearButtonHandler()}><span>Clear</span></button>
-                <button id="random" onClick={() => randomButtonHandler()}><span>Random</span></button>
+                <button className="controls__button" onClick={() => randomButtonHandler()}>
+                <span>Random</span>
+                </button>
+                <button className="controls__button" onClick={() => startButtonHandler()}>
+                <span>Play</span>
+                </button>
+                <button className="controls__button" onClick={() => clearButtonHandler()}>
+                <span>Clear</span>
+                </button>
             </div>
         </div>
     );
