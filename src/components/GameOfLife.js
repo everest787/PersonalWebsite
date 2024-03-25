@@ -47,11 +47,19 @@ function GameOfLife() {
     }
 
     function resetGrids() {
-        for (var i = 0; i < rows; i++) {
-            for (var j = 0; j < cols; j++) {
-                grid[i][j] = 0;
-                nextGrid[i][j] = 0;
+        try {
+            for (var i = 0; i < rows; i++) {
+                for (var j = 0; j < cols; j++) {
+                    grid[i][j] = 0;
+                    nextGrid[i][j] = 0;
+                }
             }
+        }
+        catch(e){
+            console.log(e)
+            console.log("Rows: " + rows + " Cols: " + cols)
+            console.log("Grid: " + grid + " length: "+ grid.length)
+
         }
     }
 
