@@ -2,6 +2,7 @@ import './sass/main.scss';
 import { useState } from 'react';
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
+import GameOfLife from "./components/GameOfLife";
 import WorkHistory from "./components/WorkHistory";
 import Contact from "./components/Contact";
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        <GameOfLife />
         <main className="content">
           <nav className={"navigation " + ((component===0) ? "navigation__closed" : "navigation__opened")}>
             <ul className="navigation__list">

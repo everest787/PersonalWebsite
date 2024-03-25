@@ -1,0 +1,66 @@
+.gameoflife {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $color-primary;
+
+    #gridContainer {
+        padding: 1rem;
+        width: 100%;
+        height: 90%;
+    }
+    
+    table {
+        background-color: $color-primary;
+        border-spacing: 0;
+    }
+    
+    td {
+        box-sizing: border-box;
+        border: 1px solid $color-secondary;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .controls {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        width: 100vw;
+        padding: 0 35% 1rem 35%;
+
+        &__button {
+            width: 6rem;
+            height: 6rem;
+            background-color: $color-grey-light-2;
+            border-radius: 2.5rem;
+            box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+            color: #121212;
+            cursor: pointer;
+            transition: box-shadow .2s;
+            border: 0;
+
+            &__start{
+                width: 100%;
+                height: 100%;
+                
+            }
+
+            &:hover {
+              box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+              font-weight: 900;
+            }
+
+        }
+    }
+    
+    td.dead {
+        background-color: transparent;
+    }
+    
+    td.live {
+        background-color: $color-tertiary;
+    }
+}
