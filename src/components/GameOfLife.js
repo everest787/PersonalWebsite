@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import React from 'react';
 
 function GameOfLife() { 
     var rows = Math.floor((window.innerHeight - 60) / 20);
@@ -47,19 +48,11 @@ function GameOfLife() {
     }
 
     function resetGrids() {
-        try {
-            for (var i = 0; i < rows; i++) {
-                for (var j = 0; j < cols; j++) {
-                    grid[i][j] = 0;
-                    nextGrid[i][j] = 0;
-                }
+        for (var i = 0; i < rows; i++) {
+            for (var j = 0; j < cols; j++) {
+                grid[i][j] = 0;
+                nextGrid[i][j] = 0;
             }
-        }
-        catch(e){
-            console.log(e)
-            console.log("Rows: " + rows + " Cols: " + cols)
-            console.log("Grid: " + grid[0] + " length: "+ grid.length)
-
         }
     }
 
@@ -118,8 +111,6 @@ function GameOfLife() {
 
     // clear the grid
     function clearButtonHandler() {
-        console.log("Clear the game: stop playing, clear the grid");
-        
         playing = false;
         clearTimeout(timer);
         
@@ -222,9 +213,12 @@ function GameOfLife() {
         return count;
     }
 
-
+    let didInit = false;
     useEffect(() => {
-        initialize();
+        if (!didInit) {
+            didInit = true;
+            initialize();
+        }
       }, []);
 
     return (  
@@ -247,4 +241,4 @@ function GameOfLife() {
     );
 }
 
-export default GameOfLife;
+export default React.memo(GameOfLife);

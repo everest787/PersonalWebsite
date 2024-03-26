@@ -9,6 +9,3 @@ I got the code for the Game of Life off this codepen by Robert Spatz:
 https://codepen.io/RBSpatz/pen/rLyNLb
 
 I had to make some alterations to make it work / look the way I wanted to, but I'm grateful for the code available online!
-
-### Bugs
-There is a bug in the Game of Life that when the component is open, the grid for the game becomes undefined. I'm still working on figuring out why. 
