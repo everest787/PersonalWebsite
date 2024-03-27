@@ -56,11 +56,19 @@
     &__job{
     
         &-desc {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            & ul {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
 
             &__item {
 
+                & ul {
+                    padding-left: 2rem;
+                }
             }
         }
 
@@ -71,6 +79,8 @@
                                 "title2 title2"
                                 "point3 point4";
             grid-template-rows: .2fr 1fr .2fr 1fr;
+            border-bottom: 1px solid $work-primary;
+            border-top: 1px solid $work-primary;
             
             &__title-1 {
                 text-decoration: underline;
@@ -87,11 +97,6 @@
 
             &__list {
                 padding-left: 2rem;
-
-
-                &__item {
-
-                }
             }
         }
     }

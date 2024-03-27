@@ -11,43 +11,91 @@ function WorkHistory() {
 
                 <div className="workhistory__job1">
                     <h2 className="workhistory__title">Junior Backend Developer</h2>
-                    <ul className="workhistory__job-desc">
-                        <li className="workhistory__job-desc__item">Contributed to a staffing platform enhancing 
-                        workforce management for shift-based and placement-based agencies, streamlining the 
-                        scheduling and job placement processes.</li>
-                        <li className="workhistory__job-desc__item">Designed and implemented a data upload feature 
-                        that reduced customer onboarding time by 35%.</li>
-                        <li className="workhistory__job-desc__item">Consistently upheld software quality standards 
-                        through monitoring, optimization of database queries, and refinement of software performance.</li>
-                        <li className="workhistory__job-desc__item">Led monthly team retrospective meetings 
-                        facilitating communication among team members, gathering feedback, and 
-                        collaborating with management to identify and implement solutions.</li>
-                    </ul>
+                    <div className="workhistory__job-desc">
+                        <ul>
+                            <li className="workhistory__job-desc__item">
+                                Wrote code and tests, resolved issues, and maintained documentation.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Upheld software quality standards 
+                            <ul>
+                                <li>Optimization of database queries </li>
+                                <li>Refinement of software performance</li>
+                                <li>Analyzed bottlenecks</li>
+                                <li>Managed systems</li>
+                            </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li className="workhistory__job-desc__item">
+                                Lead developer on data upload feature.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Maintained / monitored CI/CD software.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Led monthly team retrospective meetings.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Communicated with cross-functional teams, integration partners, and team members.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Created user flow diagrams and project plans.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="workhistory__job2">
                     <h2 className="workhistory__title">Quality Assurance Analyst</h2>
-                    <ul className="workhistory__job-desc">
-                        <li className="workhistory__job-desc__item">Analyzed user / business needs to 
-                        produce detailed functional and technical requirements.</li>
-                        <li className="workhistory__job-desc__item">Developed software change documentation 
-                        for features, reporting outcomes, addressing concerns, and ensuring the upkeep 
-                        of formal documentation standards.</li>
-                        <li className="workhistory__job-desc__item">Conducted exhaustive software testing 
-                        for business applications, ensuring robustness, reliability, and adherence to 
-                        quality standards throughout the development lifecycle.</li>
-                    </ul>
+                    <div className="workhistory__job-desc">
+                        <ul>
+                            <li className="workhistory__job-desc__item">
+                                Conducted software testing for robustness, reliability, and adherence to quality standards.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Wrote / maintained functional and technical requirement documentation.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Documenting features, testing outcomes, product issues, and areas for improvement.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li className="workhistory__job-desc__item">
+                                Created and monitored Jira tickets for features or issues.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Planned new testing processes.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Communicated with cross-functional teams about software features and issues. 
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="workhistory__job3">
                     <h2 className="workhistory__title">Quality Assurance Automation Analyst, Intern</h2>
-                    <ul className="workhistory__job-desc">
-                        <li className="workhistory__job-desc__item">Implemented behaviour driven test 
-                        automation that increased test coverage and reduced manual testing time.</li>
-                        <li className="workhistory__job-desc__item">Utilized both business and technical 
-                        requirements to develop, maintain, and update automated testing programs.</li>
-                        <li className="workhistory__job-desc__item">Managed the execution of automated 
-                        test scripts, providing demonstrations and explanations of the automation to 
-                        project leads and fellow QA analysts.</li>
-                    </ul>
+                    <div className="workhistory__job-desc">
+                        <ul>
+                            <li className="workhistory__job-desc__item">
+                                Developed, maintained, and updated behaviour driven test automation. 
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Managed the execution of automated test scripts, providing demonstrations and explanations when necessary.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Documenting features, testing outcomes, product issues, and areas for improvement.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li className="workhistory__job-desc__item">
+                                Planned new testing processes.
+                            </li>
+                            <li className="workhistory__job-desc__item">
+                                Communicated with cross-functional teams about technical implementation and issues. 
+                            </li>
+                        </ul>
+                    </div>
+                    
                 </div>
 
                 <div className="workhistory__technologies">
