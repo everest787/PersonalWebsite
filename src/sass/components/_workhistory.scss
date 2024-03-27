@@ -53,20 +53,51 @@
         }
     }
 
-    &__job-desc {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+    &__job{
+    
+        &-desc {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
 
-        &__item {
+            & ul {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
 
+            &__item {
+
+                & ul {
+                    padding-left: 2rem;
+                }
+            }
         }
-    }
-    &__stacklist {
-        padding-left: 1.5rem;
-        list-style-type: none;
 
-        &__item {
+        &__stack {
+            display: grid;
+            grid-template-areas:"title1 title1"
+                                "point1 point2"
+                                "title2 title2"
+                                "point3 point4";
+            grid-template-rows: .2fr 1fr .2fr 1fr;
+            border-bottom: 1px solid $work-primary;
+            border-top: 1px solid $work-primary;
+            
+            &__title-1 {
+                text-decoration: underline;
+                line-height: 1;
+                padding-left: 1rem;
+                grid-area: title1;
+            }
+            &__title-2 {
+                text-decoration: underline;
+                line-height: 1;
+                padding-left: 1rem;
+                grid-area: title2;
+            }
 
+            &__list {
+                padding-left: 2rem;
+            }
         }
     }
 
