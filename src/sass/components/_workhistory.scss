@@ -47,15 +47,44 @@
         }
     }
 
-    &__title {
-        @include respond(phone) { 
-            font-size: 1.5rem;
-        }
-    }
+    &__job {
+        --duration1: 2.5s;
+        --duration2: calc(var(--duration1) / 2);
+        --delay1: calc(var(--duration2) / 2);
+        --delay2: calc(var(--duration2) + var(--delay1));
+        --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
+        background-color: wheat;
+        border-bottom: 2px solid $work-primary;
+        overflow: hidden;
 
-    &__job{
-    
+        &__title {
+            //opacity: 0;
+            //transform: translateY(3em);
+            //animation: loadH1 var(--duration1) var(--easing) var(--delay1) forwards;
+
+            @include respond(phone) { 
+                font-size: 1.5rem;
+            }
+        }
+        
         &-desc {
+            display: block;
+            transform: translateY(30%);
+            border: .3rem solid black;
+            border-radius: 2rem;
+            padding: 1rem;
+
+            h3 {
+                border-bottom: .3rem solid black;
+            }
+            &__opened {
+                animation: loadResp .8s cubic-bezier(.26,.69,.93,.99) forwards;
+            }
+            &__closed:hover {
+                transform: translateY(29%);
+            }
+
+            /*
             display: grid;
             grid-template-columns: 1fr 1fr;
 
@@ -70,6 +99,7 @@
                     padding-left: 2rem;
                 }
             }
+            */
         }
 
         &__stack {
@@ -97,6 +127,30 @@
 
             &__list {
                 padding-left: 2rem;
+            }
+        }
+        @keyframes loadH1 {
+            0% {
+                opacity: 0;
+                transform: translateY(3em);
+            }
+            30%,
+            50% {
+                opacity: 1;
+                transform: translateY(3em);
+            }
+            100% {
+                opacity: 1;
+                transform: none; 
+            }
+            }
+            
+            @keyframes loadResp {
+            0% {
+                transform: translateY(30%);
+            }
+            100% {
+                transform: none; 
             }
         }
     }

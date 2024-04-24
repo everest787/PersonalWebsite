@@ -1,4 +1,14 @@
+import { useState } from 'react';
+
 function WorkHistory() { 
+    const [jbd, setjbd] = useState(false);
+    const [qaa, setqaa] = useState(false);
+    const [qaaai, setqaaai] = useState(false);
+
+    function handleClickjbd() {
+        setjbd(prevjbd => !prevjbd);
+    }
+
     return (  
         <div className="workhistory">
             <div className="workhistory__line workhistory__line--top"></div>
@@ -9,9 +19,12 @@ function WorkHistory() {
                 <h2 className="workhistory__heading">Work History</h2>
                 <div className="workhistory__desc-container">
 
-                <div className="workhistory__job1">
-                    <h2 className="workhistory__title">Junior Backend Developer</h2>
-                    <div className="workhistory__job-desc">
+                <div className="workhistory__job workhistory__job1">
+                    <h2 className="workhistory__job__title">Junior Backend Developer</h2>
+                    <div className={"workhistory__job-desc " 
+                        + ((jbd) ? "workhistory__job-desc__opened" : "workhistory__job-desc__closed")} 
+                        onClick={() => handleClickjbd()}>
+                        <h3>Responsibilities</h3>
                         <ul>
                             <li className="workhistory__job-desc__item">
                                 Wrote code and tests, resolved issues, and maintained documentation.
