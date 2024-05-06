@@ -56,11 +56,16 @@
         background-color: wheat;
         border-bottom: 2px solid $work-primary;
         overflow: hidden;
+        position: relative;
 
         &__title {
-            //opacity: 0;
-            //transform: translateY(3em);
-            //animation: loadH1 var(--duration1) var(--easing) var(--delay1) forwards;
+            transform: translateY(2rem);
+            text-align: center;
+            font-size: 3rem;
+
+            &__opened {
+                animation: loadTitle .8s cubic-bezier(.26,.69,.93,.99) forwards;
+            }
 
             @include respond(phone) { 
                 font-size: 1.5rem;
@@ -73,6 +78,7 @@
             border: .3rem solid black;
             border-radius: 2rem;
             padding: 1rem;
+            margin: 0 1rem;
 
             h3 {
                 border-bottom: .3rem solid black;
@@ -103,6 +109,11 @@
         }
 
         &__stack {
+            display: flex;
+            position: absolute;
+            top: 6rem;
+            padding-left: 2rem;
+            /*
             display: grid;
             grid-template-areas:"title1 title1"
                                 "point1 point2"
@@ -124,28 +135,22 @@
                 padding-left: 1rem;
                 grid-area: title2;
             }
-
+*/
             &__list {
                 padding-left: 2rem;
             }
         }
-        @keyframes loadH1 {
+        @keyframes loadTitle {
             0% {
-                opacity: 0;
-                transform: translateY(3em);
-            }
-            30%,
-            50% {
-                opacity: 1;
-                transform: translateY(3em);
+                transform: translateY(2rem);
+                font-size: 3rem;
             }
             100% {
-                opacity: 1;
                 transform: none; 
+                font-size: 1.7rem;
             }
-            }
-            
-            @keyframes loadResp {
+        }    
+        @keyframes loadResp {
             0% {
                 transform: translateY(30%);
             }
@@ -157,6 +162,11 @@
 
     &__desc-container {
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+        /*
         display: grid;
         grid-template-areas:    "job1 technologies job1-stack"
                                 "job2 technologies job2-stack"
@@ -186,4 +196,5 @@
     &__job3-stack {
         grid-area: job3-stack;
     }
+    */
 }
