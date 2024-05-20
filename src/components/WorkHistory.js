@@ -67,37 +67,39 @@ function WorkHistory() {
                         + ((jbd) ? "workhistory__job-desc__opened" : "workhistory__job-desc__closed")} 
                         onClick={() => handleClickjbd()}>
                         <h3>Responsibilities</h3>
-                        <ul>
-                            <li className="workhistory__job-desc__item">
-                                Wrote code and tests, resolved issues, and maintained documentation.
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Upheld software quality standards 
+                        <div className="workhistory__job-desc__list">
                             <ul>
-                                <li>Optimization of database queries </li>
-                                <li>Refinement of software performance</li>
-                                <li>Analyzed bottlenecks</li>
-                                <li>Managed systems</li>
+                                <li className="workhistory__job-desc__item">
+                                    Wrote code and tests, resolved issues, and maintained documentation.
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Upheld software quality standards 
+                                <ul>
+                                    <li>Optimization of database queries </li>
+                                    <li>Refinement of software performance</li>
+                                    <li>Analyzed bottlenecks</li>
+                                    <li>Managed systems</li>
+                                </ul>
+                                </li>
                             </ul>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li className="workhistory__job-desc__item">
-                                Lead developer on data upload feature.
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Maintained / monitored CI/CD software.
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Led monthly team retrospective meetings.
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Communicated with cross-functional teams, integration partners, and team members.
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Created user flow diagrams and project plans.
-                            </li>
-                        </ul>
+                            <ul>
+                                <li className="workhistory__job-desc__item">
+                                    Lead developer on data upload feature.
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Maintained / monitored CI/CD software.
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Led monthly team retrospective meetings.
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Communicated with cross-functional teams, integration partners, and team members.
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Created user flow diagrams and project plans.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="workhistory__job">
@@ -126,6 +128,7 @@ function WorkHistory() {
                         + ((qaa) ? "workhistory__job-desc__opened" : "workhistory__job-desc__closed")} 
                         onClick={() => handleClickqaa()}>
                         <h3>Responsibilities</h3>
+                        <div className="workhistory__job-desc__list">
                         <ul>
                             <li className="workhistory__job-desc__item">
                                 Conducted software testing for robustness, reliability, and adherence to quality standards.
@@ -148,6 +151,7 @@ function WorkHistory() {
                                 Communicated with cross-functional teams about software features and issues. 
                             </li>
                         </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="workhistory__job">
@@ -192,25 +196,27 @@ function WorkHistory() {
                         + ((qaaai) ? "workhistory__job-desc__opened" : "workhistory__job-desc__closed")} 
                         onClick={() => handleClickqaaai()}>
                         <h3>Responsibilities</h3>
-                        <ul>
-                            <li className="workhistory__job-desc__item">
-                                Developed, maintained, and updated behaviour driven test automation. 
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Managed the execution of automated test scripts, providing demonstrations and explanations when necessary.
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Documenting features, testing outcomes, product issues, and areas for improvement.
-                            </li>
-                        </ul>
-                        <ul>
-                            <li className="workhistory__job-desc__item">
-                                Planned new testing processes.
-                            </li>
-                            <li className="workhistory__job-desc__item">
-                                Communicated with cross-functional teams about technical implementation and issues. 
-                            </li>
-                        </ul>
+                        <div className="workhistory__job-desc__list">
+                            <ul>
+                                <li className="workhistory__job-desc__item">
+                                    Developed, maintained, and updated behaviour driven test automation. 
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Managed the execution of automated test scripts, providing demonstrations and explanations when necessary.
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Documenting features, testing outcomes, product issues, and areas for improvement.
+                                </li>
+                            </ul>
+                            <ul>
+                                <li className="workhistory__job-desc__item">
+                                    Planned new testing processes.
+                                </li>
+                                <li className="workhistory__job-desc__item">
+                                    Communicated with cross-functional teams about technical implementation and issues. 
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     
                 </div>
