@@ -29,38 +29,46 @@ function WorkHistory() {
                     <h2 className={"workhistory__job__title " 
                         + ((jbd) ? "workhistory__job__title__opened" : "workhistory__job__title__closed")} >Junior Backend Developer</h2>
                     <div className="workhistory__job__stack">
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            JavaScript
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            TypeScript
-                            </li>
-                        </ul>
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            Node.js
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            React.js
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            MongoDB
-                            </li>
-                        </ul>
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            Azure
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            AWS
-                            </li>
-                        </ul>
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            Jira
-                            </li>
-                        </ul>
+                        <div className="workhistory__job__stack__container">
+                            <h3>Languages</h3>
+                            <div>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    JavaScript
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    TypeScript
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="workhistory__job__stack__container">
+                            <h3>Technologies</h3>
+                            <div>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    Node.js
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    React.js
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    MongoDB
+                                    </li>
+                                </ul>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    Azure
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    AWS
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    Jira
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <div className={"workhistory__job-desc " 
@@ -106,22 +114,32 @@ function WorkHistory() {
                     <h2 className={"workhistory__job__title " 
                         + ((qaa) ? "workhistory__job__title__opened" : "workhistory__job__title__closed")}>Quality Assurance Analyst</h2>
                     <div className="workhistory__job__stack">
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            Java
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            MySQL
-                            </li>
-                        </ul>
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            Jira
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            Excel
-                            </li>
-                        </ul>
+                        <div className="workhistory__job__stack__container">
+                            <h3>Languages</h3>
+                            <div>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    Java
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    MySQL
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="workhistory__job__stack__container">
+                            <h3>Technologies</h3>
+                            <div>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    Jira
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    Excel
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     <div className={"workhistory__job-desc " 
@@ -158,38 +176,46 @@ function WorkHistory() {
                     <h2 className={"workhistory__job__title " 
                         + ((qaaai) ? "workhistory__job__title__opened" : "workhistory__job__title__closed")}>Quality Assurance Automation Analyst, Intern</h2>
                     <div className="workhistory__job__stack">
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            Java
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            Selenium
-                            </li>
-                        </ul>
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            MySQL
-                            </li>
-                        </ul>
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            Junit
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            Gradle
-                            </li>
-                        </ul>
-                        <ul className="workhistory__job__stack__list">
-                            <li className="workhistory__job__stack__list__item">
-                            HTML5
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            XML
-                            </li>
-                            <li className="workhistory__job__stack__list__item">
-                            JSON
-                            </li>
-                        </ul>
+                        <div className="workhistory__job__stack__container">
+                            <h3>Languages</h3>
+                            <div>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    Java
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    Selenium
+                                    </li>
+                                </ul>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    MySQL
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="workhistory__job__stack__container">
+                            <h3>Technologies</h3>
+                            <ul className="workhistory__job__stack__list">
+                                <li className="workhistory__job__stack__list__item">
+                                Junit
+                                </li>
+                                <li className="workhistory__job__stack__list__item">
+                                Gradle
+                                </li>
+                            </ul>
+                            <ul className="workhistory__job__stack__list">
+                                <li className="workhistory__job__stack__list__item">
+                                HTML5
+                                </li>
+                                <li className="workhistory__job__stack__list__item">
+                                XML
+                                </li>
+                                <li className="workhistory__job__stack__list__item">
+                                JSON
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className={"workhistory__job-desc " 
