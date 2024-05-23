@@ -27,24 +27,12 @@
         font-size: 2rem;
 
     }
-    &__technologies {
-        grid-area: technologies;
-        background-color: $work-primary;
-        border: 3px solid $color-grey-dark-3;
 
-        &__text {
-            position: absolute;
-            transform: translateX(-35%) translateY(120%) rotate(-90deg);
-            font-size: 3.5rem;
-            @include respond(tab-port) { 
-                transform: translateX(-40%) translateY(120%) rotate(-90deg);
-                font-size: 2.5rem;
-            }
-            @include respond(phone) { 
-                transform: translateX(-45%) translateY(120%) rotate(-90deg);
-                font-size: 2.5rem;
-            }
-        }
+    &__desc-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid $work-primary;
     }
 
     &__job {
@@ -53,13 +41,12 @@
         --delay1: calc(var(--duration2) / 2);
         --delay2: calc(var(--duration2) + var(--delay1));
         --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
-        background-color: wheat;
-        border-bottom: 2px solid $work-primary;
         overflow: hidden;
         position: relative;
+        border: 1px solid $work-primary;
+        height: (1/3)*100%;
 
         &__title {
-            transform: translateY(2rem);
             text-align: center;
             font-size: 3rem;
 
@@ -75,7 +62,6 @@
         &-desc {
             display: block;
             transform: translateY(30%);
-            background-color: wheat;
             border-radius: 2rem;
             padding: 1rem;
             margin: 0 1rem;
@@ -88,6 +74,7 @@
                 display: inline-block;
                 padding: 0 2rem;
                 font-size: 1.8rem;
+                background-color: $component-secondary;
             }
             &__opened {
                 animation: loadResp .8s cubic-bezier(.26,.69,.93,.99) forwards;
@@ -97,6 +84,7 @@
             }
             &__list {
                 border: .3rem solid black;
+                background-color: $component-secondary;
             }
 
             & ul {
@@ -115,8 +103,7 @@
         &__stack {
             display: flex;
             position: absolute;
-            top: 6rem;
-            padding-left: 2rem;
+            top: 5rem;
             width: 100%;
 
             &__container {
@@ -138,11 +125,9 @@
         }
         @keyframes loadTitle {
             0% {
-                transform: translateY(2rem);
                 font-size: 3rem;
             }
             100% {
-                transform: none; 
                 font-size: 1.7rem;
             }
         }    
@@ -151,46 +136,8 @@
                 transform: translateY(30%);
             }
             100% {
-                transform: none; 
+                transform: translateY(-10%);
             }
         }  
     }
-
-    &__desc-container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-        /*
-        display: grid;
-        grid-template-areas:    "job1 technologies job1-stack"
-                                "job2 technologies job2-stack"
-                                "job3 technologies job3-stack";
-        grid-template-columns: 8fr 0.5fr 2fr;
-        @include respond(phone) { 
-            grid-template-columns: 6fr 0.5fr 2fr;
-        }
-
-    }
-
-    &__job1 {
-        grid-area: job1;
-    }
-    &__job2 {
-        grid-area: job2;
-    }
-    &__job3 {
-        grid-area: job3;
-    }
-    &__job1-stack {
-        grid-area: job1-stack;
-    }
-    &__job2-stack {
-        grid-area: job2-stack;
-    }
-    &__job3-stack {
-        grid-area: job3-stack;
-    }
-    */
 }
