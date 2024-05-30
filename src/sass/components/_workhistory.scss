@@ -64,7 +64,7 @@
             border-radius: 2rem;
             padding: 1rem;
             margin: 0 1rem;
-            max-height: 100%;
+            height: 100%;
 
             h3 {
                 border: .3rem solid black;
@@ -83,18 +83,25 @@
                 transform: translateY(29%);
             }
             &__list {
+                display: flex;
+                justify-content: space-between;
                 border: .3rem solid black;
                 background-color: $component-secondary;
+                font-size: 2rem;
+                font-weight: 600;
+                height: 80%;
             }
 
             & ul {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
+                padding: 0 4rem;
             }
 
             &__item {
+                padding: .7rem 0;
 
                 & ul {
+                    display: flex;
+                    justify-content: space-between;
                     padding-left: 2rem;
                 }
             }
