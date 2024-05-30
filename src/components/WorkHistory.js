@@ -58,7 +58,7 @@ function WorkHistory() {
                                 </ul>
                                 <ul className="workhistory__job__stack__list">
                                     <li className="workhistory__job__stack__list__item">
-                                    Azure
+                                    REST API
                                     </li>
                                     <li className="workhistory__job__stack__list__item">
                                     AWS
@@ -177,11 +177,6 @@ function WorkHistory() {
                                     Java
                                     </li>
                                     <li className="workhistory__job__stack__list__item">
-                                    Selenium
-                                    </li>
-                                </ul>
-                                <ul className="workhistory__job__stack__list">
-                                    <li className="workhistory__job__stack__list__item">
                                     MySQL
                                     </li>
                                 </ul>
@@ -189,25 +184,30 @@ function WorkHistory() {
                         </div>
                         <div className="workhistory__job__stack__container">
                             <h3>Technologies</h3>
-                            <ul className="workhistory__job__stack__list">
-                                <li className="workhistory__job__stack__list__item">
-                                Junit
-                                </li>
-                                <li className="workhistory__job__stack__list__item">
-                                Gradle
-                                </li>
-                            </ul>
-                            <ul className="workhistory__job__stack__list">
-                                <li className="workhistory__job__stack__list__item">
-                                HTML5
-                                </li>
-                                <li className="workhistory__job__stack__list__item">
-                                XML
-                                </li>
-                                <li className="workhistory__job__stack__list__item">
-                                JSON
-                                </li>
-                            </ul>
+                            <div>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    Junit
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    Selenium
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    REST API
+                                    </li>
+                                </ul>
+                                <ul className="workhistory__job__stack__list">
+                                    <li className="workhistory__job__stack__list__item">
+                                    Gradle
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    XML
+                                    </li>
+                                    <li className="workhistory__job__stack__list__item">
+                                    JSON
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 

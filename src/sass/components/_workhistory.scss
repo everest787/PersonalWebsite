@@ -60,7 +60,7 @@
         }
         
         &-desc {
-            transform: translateY(30%);
+            transform: translateY(40%);
             border-radius: 2rem;
             padding: 1rem;
             margin: 0 1rem;
@@ -80,7 +80,7 @@
                 animation: loadResp .8s cubic-bezier(.26,.69,.93,.99) forwards;
             }
             &__closed:hover {
-                transform: translateY(29%);
+                transform: translateY(39%);
             }
             &__list {
                 display: flex;
@@ -97,6 +97,7 @@
             }
 
             &__item {
+                list-style-type: square;
                 padding: .7rem 0;
 
                 & ul {
@@ -110,7 +111,7 @@
         &__stack {
             display: flex;
             position: absolute;
-            top: 5rem;
+            top: 4rem;
             width: 100%;
 
             &__container {
@@ -122,12 +123,16 @@
                 }
             }
             & h3 {
+                color: $color-grey-dark;
+                font-size: 2rem;
                 font-family: "PixelifySans";
                 width: 100%;
                 text-align: center;
             }
             &__list {
+                list-style-type: square;
                 padding-left: 2rem;
+                font-size: 1.7rem;
             }
         }
         @keyframes loadTitle {
@@ -140,7 +145,7 @@
         }    
         @keyframes loadResp {
             0% {
-                transform: translateY(30%);
+                transform: translateY(40%);
             }
             100% {
                 transform: translateY(-15%);
