@@ -13,7 +13,7 @@
         @include respond(tab-land) { 
             font-size: 1.4rem;
         }
-        @include respond(tab-land) { 
+        @include respond(tab-port) { 
             font-size: 1.3rem;
         }
 
@@ -27,109 +27,165 @@
         font-size: 2rem;
 
     }
-    &__technologies {
-        grid-area: technologies;
-        background-color: $work-primary;
-        border: 3px solid $color-grey-dark-3;
 
-        &__text {
-            position: absolute;
-            transform: translateX(-35%) translateY(120%) rotate(-90deg);
-            font-size: 3.5rem;
-            @include respond(tab-port) { 
-                transform: translateX(-40%) translateY(120%) rotate(-90deg);
-                font-size: 2.5rem;
-            }
+    &__desc-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid $work-primary;
+    }
+
+    &__job {
+        --duration1: 2.5s;
+        --duration2: calc(var(--duration1) / 2);
+        --delay1: calc(var(--duration2) / 2);
+        --delay2: calc(var(--duration2) + var(--delay1));
+        --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid $work-primary;
+        height: (1/3)*100%;
+
+        &__title {
+            text-align: center;
+            font-size: 3rem;
+
             @include respond(phone) { 
-                transform: translateX(-45%) translateY(120%) rotate(-90deg);
-                font-size: 2.5rem;
+                font-size: 1.5rem;
+            }
+
+            &__opened {
+                animation: loadTitle .8s cubic-bezier(.26,.69,.93,.99) forwards;
+
+                @include respond(phone) { 
+                    animation: none;
+                    font-size: 1.2rem;
+                }
             }
         }
-    }
-
-    &__title {
-        @include respond(phone) { 
-            font-size: 1.5rem;
-        }
-    }
-
-    &__job{
-    
+        
         &-desc {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            transform: translateY(40%);
+            border-radius: 2rem;
+            padding: 1rem;
+            margin: 0 1rem;
+            height: 100%;
+
+            h3 {
+                border: .3rem solid black;
+                border-bottom: none;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+                display: inline-block;
+                padding: 0 2rem;
+                font-size: 1.8rem;
+                background-color: $component-secondary;
+
+                @include respond(phone) { 
+                    font-size: 1.2rem;
+                }
+            }
+            &__opened {
+                animation: loadResp .8s cubic-bezier(.26,.69,.93,.99) forwards;
+            }
+            &__closed:hover {
+                transform: translateY(39%);
+            }
+            &__list {
+                display: flex;
+                justify-content: space-between;
+                border: .3rem solid black;
+                background-color: $component-secondary;
+                font-size: 2rem;
+                font-weight: 600;
+                height: 80%;
+
+                @include respond(phone) { 
+                    font-size: .8rem;
+                }
+            }
 
             & ul {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
+                padding: 0 4rem;
+                @include respond(phone) { 
+                    padding: 0 0 0 1.5rem;
+                }
             }
 
             &__item {
+                list-style-type: square;
+                padding: .7rem 0;
+
+                @include respond(phone) { 
+                    padding: 0;
+                }
 
                 & ul {
-                    padding-left: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 0 0 2rem;
+
+                    @include respond(phone) { 
+                        padding: 0 0 0 1rem;
+                    }
                 }
             }
         }
 
         &__stack {
-            display: grid;
-            grid-template-areas:"title1 title1"
-                                "point1 point2"
-                                "title2 title2"
-                                "point3 point4";
-            grid-template-rows: .2fr 1fr .2fr 1fr;
-            border-bottom: 1px solid $work-primary;
-            border-top: 1px solid $work-primary;
-            
-            &__title-1 {
-                text-decoration: underline;
-                line-height: 1;
-                padding-left: 1rem;
-                grid-area: title1;
-            }
-            &__title-2 {
-                text-decoration: underline;
-                line-height: 1;
-                padding-left: 1rem;
-                grid-area: title2;
+            display: flex;
+            position: absolute;
+            top: 4rem;
+            width: 100%;
+
+            @include respond(phone) { 
+                top: 2rem;
             }
 
+            &__container {
+                width: 50%;
+
+                & div {
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+            & h3 {
+                color: $color-grey-dark;
+                font-size: 2rem;
+                font-family: "PixelifySans";
+                width: 100%;
+                text-align: center;
+
+                @include respond(phone) { 
+                    font-size: 1rem;
+                }
+            }
             &__list {
+                list-style-type: square;
                 padding-left: 2rem;
+                font-size: 1.7rem;
+
+                @include respond(phone) { 
+                    font-size: .9rem;
+                }
             }
         }
-    }
-
-    &__desc-container {
-        height: 100%;
-        display: grid;
-        grid-template-areas:    "job1 technologies job1-stack"
-                                "job2 technologies job2-stack"
-                                "job3 technologies job3-stack";
-        grid-template-columns: 8fr 0.5fr 2fr;
-        @include respond(phone) { 
-            grid-template-columns: 6fr 0.5fr 2fr;
-        }
-
-    }
-
-    &__job1 {
-        grid-area: job1;
-    }
-    &__job2 {
-        grid-area: job2;
-    }
-    &__job3 {
-        grid-area: job3;
-    }
-    &__job1-stack {
-        grid-area: job1-stack;
-    }
-    &__job2-stack {
-        grid-area: job2-stack;
-    }
-    &__job3-stack {
-        grid-area: job3-stack;
+        @keyframes loadTitle {
+            0% {
+                font-size: 3rem;
+            }
+            100% {
+                font-size: 1.7rem;
+            }
+        }    
+        @keyframes loadResp {
+            0% {
+                transform: translateY(40%);
+            }
+            100% {
+                transform: translateY(-15%);
+            }
+        }  
     }
 }
