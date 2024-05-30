@@ -13,7 +13,7 @@
         @include respond(tab-land) { 
             font-size: 1.4rem;
         }
-        @include respond(tab-land) { 
+        @include respond(tab-port) { 
             font-size: 1.3rem;
         }
 
@@ -50,12 +50,17 @@
             text-align: center;
             font-size: 3rem;
 
-            &__opened {
-                animation: loadTitle .8s cubic-bezier(.26,.69,.93,.99) forwards;
-            }
-
             @include respond(phone) { 
                 font-size: 1.5rem;
+            }
+
+            &__opened {
+                animation: loadTitle .8s cubic-bezier(.26,.69,.93,.99) forwards;
+
+                @include respond(phone) { 
+                    animation: none;
+                    font-size: 1.2rem;
+                }
             }
         }
         
@@ -75,6 +80,10 @@
                 padding: 0 2rem;
                 font-size: 1.8rem;
                 background-color: $component-secondary;
+
+                @include respond(phone) { 
+                    font-size: 1.2rem;
+                }
             }
             &__opened {
                 animation: loadResp .8s cubic-bezier(.26,.69,.93,.99) forwards;
@@ -90,20 +99,35 @@
                 font-size: 2rem;
                 font-weight: 600;
                 height: 80%;
+
+                @include respond(phone) { 
+                    font-size: .8rem;
+                }
             }
 
             & ul {
                 padding: 0 4rem;
+                @include respond(phone) { 
+                    padding: 0 0 0 1.5rem;
+                }
             }
 
             &__item {
                 list-style-type: square;
                 padding: .7rem 0;
 
+                @include respond(phone) { 
+                    padding: 0;
+                }
+
                 & ul {
                     display: flex;
                     justify-content: space-between;
-                    padding-left: 2rem;
+                    padding: 0 0 0 2rem;
+
+                    @include respond(phone) { 
+                        padding: 0 0 0 1rem;
+                    }
                 }
             }
         }
@@ -113,6 +137,10 @@
             position: absolute;
             top: 4rem;
             width: 100%;
+
+            @include respond(phone) { 
+                top: 2rem;
+            }
 
             &__container {
                 width: 50%;
@@ -128,11 +156,19 @@
                 font-family: "PixelifySans";
                 width: 100%;
                 text-align: center;
+
+                @include respond(phone) { 
+                    font-size: 1rem;
+                }
             }
             &__list {
                 list-style-type: square;
                 padding-left: 2rem;
                 font-size: 1.7rem;
+
+                @include respond(phone) { 
+                    font-size: .9rem;
+                }
             }
         }
         @keyframes loadTitle {

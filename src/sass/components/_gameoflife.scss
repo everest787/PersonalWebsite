@@ -31,6 +31,13 @@
         width: 100vw;
         padding: 0 35% 1rem 35%;
 
+        @include respond(tab-port) { 
+            padding: 0 30% 1rem 30%;
+        }
+        @include respond(phone) { 
+            padding: 0 20% 1rem 20%;
+        }
+
         &__button {
             width: 6rem;
             height: 6rem;

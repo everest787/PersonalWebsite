@@ -19,6 +19,7 @@
         width: 95%;
         height: 70vh;
         margin: 3rem auto;
+        padding: 0 3rem 1rem;
     }
     @include respond(phone) { 
         height: 60vh;
