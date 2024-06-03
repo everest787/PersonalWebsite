@@ -7,6 +7,37 @@
     @include border($projects-primary, 1.8rem);
     
     &__content {
+        display: grid;
+        transition: 300ms;
+        grid-template-columns: 1fr 0fr 1fr;
+        width: 100%;
+        height: 100%;
+
+        &__opened {
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+        &__closed {
+            grid-template-columns: 1fr 0fr 1fr;
+        }
+        &__items {
+            margin: 1.8rem;
+            border: 2px solid $projects-primary;
+            display: flex;
+            flex-direction: column;
+
+            &__project {
+                height: 25%;
+                border: 1px solid black;
+            }
+        }
+        &__middle {
+            border: 2px solid black;
+
+
+        }
+    }
+}
+        /*
         padding: 1.6rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -176,3 +207,4 @@
     }
 
 }
+*/

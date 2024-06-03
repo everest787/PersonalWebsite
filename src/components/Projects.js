@@ -3,12 +3,16 @@ function Projects() {
     const [component, setComponent] = useState(0);
 
     function handleClick(value) {
-      if (component === value){
+        if (component === value){
         setComponent(0);
-      }
-      else{
+        }
+        else{
         setComponent(value);
-      }
+        }
+    }
+
+    function Item({ name }) {
+        return <h2 className="item">{name}</h2>;
     }
     return ( 
         <div className="projects">
@@ -16,7 +20,22 @@ function Projects() {
             <div className="projects__line projects__line--right"></div>
             <div className="projects__line projects__line--bottom"></div>
             <div className="projects__line projects__line--left"></div>
-            <div className="projects__content">
+            <div className={"projects__content "+ ((component===0) ? "projects__content__closed" : "projects__content__opened")}>
+                <div className="projects__content__items projects__content__items__left">
+                    <div className="projects__content__items__project" onClick={() => handleClick(1)}></div>
+                    <div className="projects__content__items__project"></div>
+                    <div className="projects__content__items__project"></div>
+                    <div className="projects__content__items__project"></div>
+                </div>
+                <div className="projects__content__middle ">
+                    {(component===1) ? 
+                        <Item 
+                            name="Space suit" 
+                        />
+                    : null}
+                </div>
+                <div className="projects__content__items projects__content__items__right"></div>
+                {/* 
                 <h2 className="projects__heading">Projects</h2>
                 <div className="projects__projects">
                     <div className="projects__project">
@@ -112,6 +131,7 @@ function Projects() {
                         </ul>
                     </div>
                 </div>
+                */}
             </div>
         </div> 
     );
