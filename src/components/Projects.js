@@ -11,8 +11,16 @@ function Projects() {
         }
     }
 
-    function Item({ name }) {
-        return <h2 className="item">{name}</h2>;
+    function Item({ name, tech, desc, git }) {
+        return (
+            <div className="projects__content__desc">
+                <h1 className="projects__content__desc__header">{name}</h1>
+                <h2 className="projects__content__desc__tech">{tech}</h2>
+                <p className="projects__content__desc__desc">{desc}</p>
+                <h2 className="projects__content__desc__git">{git}</h2>
+            </div>
+            
+        );
     }
     return ( 
         <div className="projects">
@@ -21,16 +29,22 @@ function Projects() {
             <div className="projects__line projects__line--bottom"></div>
             <div className="projects__line projects__line--left"></div>
             <div className={"projects__content "+ ((component===0) ? "projects__content__closed" : "projects__content__opened")}>
-                <div className="projects__content__items projects__content__items__left">
-                    <div className="projects__content__items__project" onClick={() => handleClick(1)}></div>
+                <div className={"projects__content__items projects__content__items__left " + ((component===0) ? "projects__content__items__closed" : "projects__content__items__opened")}>
+                    <div className="projects__content__items__project" onClick={() => handleClick(1)}>
+                        <h2 className="projects__content__items__title">Websites</h2>
+                        <h3 className="projects__content__items__tech">React, SCSS, JavaScript</h3>
+                    </div>
                     <div className="projects__content__items__project"></div>
                     <div className="projects__content__items__project"></div>
                     <div className="projects__content__items__project"></div>
                 </div>
-                <div className="projects__content__middle ">
+                <div className="projects__content__middle">
                     {(component===1) ? 
                         <Item 
                             name="Space suit" 
+                            tech="123"
+                            desc="hehehe"
+                            git="jndkvjd.com"
                         />
                     : null}
                 </div>

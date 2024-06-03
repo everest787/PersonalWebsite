@@ -24,11 +24,48 @@
             border: 2px solid $projects-primary;
             display: flex;
             flex-direction: column;
+            text-align: center;
+            background: repeating-linear-gradient(
+                45deg,
+                $projects-primary,
+                $projects-primary 2px,
+                $color-grey-light-2 2px,
+                $color-grey-light-2 6px
+            );
+
+            &__opened h2 {
+                font-size: 3rem;
+            }
+            &__opened h3 {
+                display: none;
+            }
 
             &__project {
                 height: 25%;
-                border: 1px solid black;
+                border: 1px solid $projects-primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                transition: all 0.1s ease;
+                background-color: $component-secondary;
+
+                &:hover {
+                    transform: translateY(-0.25rem) translateX(0.25rem);
+                    background-color: $color-grey-light-1;
+                }
             }
+            &__title {
+                font-size: 4rem;
+                font-weight: 800;
+                transition: 300ms;
+            }
+            &__tech {
+                font-size: 2rem;
+                transition: 300ms;
+            }
+            
         }
         &__middle {
             border: 2px solid black;
