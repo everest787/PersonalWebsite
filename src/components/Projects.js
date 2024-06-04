@@ -11,13 +11,17 @@ function Projects() {
         }
     }
 
-    function Item({ name, tech, desc, git }) {
+    function Item({ name, tech, desc, link, git }) {
         return (
             <div className="projects__content__desc">
                 <h1 className="projects__content__desc__header">{name}</h1>
                 <h2 className="projects__content__desc__tech">{tech}</h2>
                 <p className="projects__content__desc__desc">{desc}</p>
-                <h2 className="projects__content__desc__git">{git}</h2>
+                <div className="projects__content__desc__git">
+                    <h2 className="projects__content__desc__git__label">GitHub: </h2>
+                    <a href={link} className="projects__content__desc__git__link">{git}</a>
+                </div>
+                
             </div>
             
         );
@@ -30,6 +34,9 @@ function Projects() {
             <div className="projects__line projects__line--left"></div>
             <div className={"projects__content "+ ((component===0) ? "projects__content__closed" : "projects__content__opened")}>
                 <div className={"projects__content__items projects__content__items__left " + ((component===0) ? "projects__content__items__closed" : "projects__content__items__opened")}>
+                    <div className="projects__content__items__labels">
+                        <h3>Personal</h3>
+                    </div>
                     <div className="projects__content__items__project" onClick={() => handleClick(1)}>
                         <h2 className="projects__content__items__title">Websites</h2>
                         <h3 className="projects__content__items__tech">React, SCSS, JavaScript</h3>
@@ -41,10 +48,13 @@ function Projects() {
                 <div className="projects__content__middle">
                     {(component===1) ? 
                         <Item 
-                            name="Space suit" 
-                            tech="123"
-                            desc="hehehe"
-                            git="jndkvjd.com"
+                            name="Websites" 
+                            tech="React.js, SCSS, JavaScript"
+                            desc="Designing and developing personal websites using React and SCSS. 
+                            This is the second personal website I have created from scratch, with a 
+                            completely different design idea from my first design."
+                            link="https://github.com/everest787/PersonalWebsite"
+                            git="Personal Website"
                         />
                     : null}
                 </div>
