@@ -15,13 +15,13 @@ function Contact() {
                     <div className="contact__linkedin">
                         <h2 className="contact__title">LinkedIn:</h2>
                         <h1 className="contact__value">
-                            <a href="https://www.linkedin.com/in/chelsea-everest/">chelsea-everest</a>
+                            <a href="https://www.linkedin.com/in/chelsea-everest/" target="_blank" rel="noreferrer">chelsea-everest</a>
                         </h1>
                     </div>
                     <div className="contact__github">
                         <h2 className="contact__title">Github:</h2>
                         <h1 className="contact__value">
-                            <a href="https://github.com/everest787">everest787</a>
+                            <a href="https://github.com/everest787" target="_blank" rel="noreferrer">everest787</a>
                         </h1>
                     </div>
                 </div>

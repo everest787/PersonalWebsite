@@ -1,12 +1,12 @@
-@mixin bottom-line-break {
+@mixin bottom-line-break($colour) {
     &:after {
         content: '';
         display: block;
         position: absolute;
-        width: 90%;
+        width: 80%;
         bottom: 0;
-        left: 5%;
-        border-bottom: 3px double $color-grey-dark-2; 
+        left: 10%;
+        border-bottom: 3px solid $colour; 
     }
 }
 
