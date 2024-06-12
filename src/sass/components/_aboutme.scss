@@ -30,6 +30,15 @@
         grid-template-rows: repeat(3, 1fr);
         max-height:100%;
         max-width: 100%;
+        background: repeating-linear-gradient(
+            45deg,
+            $projects-primary,
+            $projects-primary 2px,
+            $color-grey-light-2 2px,
+            $color-grey-light-2 6px
+        );
+        border: 2px solid $about-primary;
+        margin: .2rem;
     }
     &__section:before {
         content: "";
@@ -44,10 +53,9 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        border-radius: 2rem;
         object-fit: cover;
         overflow: hidden;
-        border: 1px solid black;
+        border: 1px solid $about-primary;
 
         &__heading {
             padding: 0 1rem;
@@ -58,6 +66,53 @@
             
             @include respond(tab-port) { 
                 font-size: 1.5rem;
+            }
+        }
+
+        &__card {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            perspective: 300rem;
+            -moz-perspective: 300rem;
+
+            &:hover &__side--front {
+                transform: rotateY(-180deg);
+            }
+            &:hover &__side--back {
+                transform: rotateY(0);
+            }
+
+            &__side {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                backface-visibility: hidden;
+    
+                transition: all 1s ease;
+    
+                &--front {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    object-fit: cover;
+                    overflow: hidden;
+    
+                }
+    
+                &--back {
+                    background-color: $about-primary;
+                    transform: rotateY(180deg);
+    
+                    &__body {
+                        font-size: 2.5rem;
+                        margin: 4rem 4rem;
+                        color: $component-secondary;
+    
+                    }
+                }
             }
         }
 
