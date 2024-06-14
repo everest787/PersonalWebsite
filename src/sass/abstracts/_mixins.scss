@@ -10,6 +10,42 @@
     }
 }
 
+@mixin link($colour) {
+    background-image: linear-gradient(
+        to right,
+        $colour,
+        $colour 50%,
+        #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:before{
+        content: '';
+        background: $colour;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        background-position: 0;
+    }
+    
+    &:hover::before{
+        width: 100%;
+    }
+}
+
 @mixin border($color, $line-width) {
     &__line {
         position: absolute;
