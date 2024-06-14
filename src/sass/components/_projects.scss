@@ -16,9 +16,23 @@
 
         &__opened {
             grid-template-columns: 1fr 2fr 1fr;
+            opacity: 1;
+
+            & .projects__content__middle{
+                animation: loadProject 0.4s cubic-bezier(1,-0.03,.95,.67) forwards;
+            }
+            @keyframes loadProject {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            } 
         }
         &__closed {
             grid-template-columns: 1fr 0fr 1fr;
+
         }
         &__tabs {
             position: relative;
