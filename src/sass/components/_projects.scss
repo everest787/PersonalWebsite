@@ -211,8 +211,6 @@
                 left: 50%;
                 margin: 0 0 1rem;
                 transform: translate(-50%, -50%);
-                &__label {
-                }
                 &__link {
                     background-image: linear-gradient(
                         to right,
@@ -271,9 +269,6 @@
                     font-size: 1.5rem;
                 }
             }
-        }
-        &__middle {
-            //border: 2px solid black;
         }
     }
 }
