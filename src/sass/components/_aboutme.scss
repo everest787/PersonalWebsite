@@ -8,7 +8,7 @@
         
     
     &__content {
-        padding: 1.6rem;
+        padding: 1.7rem;
         height: 100%;
     }
     &__heading {
@@ -37,7 +37,6 @@
             $color-grey-light-2 6px
         );
         border: 2px solid $about-primary;
-        margin: .2rem;
     }
     &__section:before {
         content: "";
