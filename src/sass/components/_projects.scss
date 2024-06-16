@@ -21,14 +21,6 @@
             & .projects__content__middle{
                 animation: loadProject 0.4s cubic-bezier(1,-0.03,.95,.67) forwards;
             }
-            @keyframes loadProject {
-                0% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            } 
         }
         &__closed {
             grid-template-columns: 1fr 0fr 1fr;
@@ -50,28 +42,9 @@
 
             &__opened h2 {
                 font-size: 2.7rem;
-                
-                @include respond(tab-land) { 
-                    font-size: 2.1rem;
-                }
-                @include respond(tab-port) { 
-                    font-size: 1.7rem;
-                }
-                @include respond(phone) { 
-                    font-size: 1.5rem;
-                }
             }
             &__opened &__project:hover h2 {
                 font-size: 3rem;
-                @include respond(tab-land) { 
-                    font-size: 2.4rem;
-                }
-                @include respond(tab-port) { 
-                    font-size: 2rem;
-                }
-                @include respond(phone) { 
-                    font-size: 1.7rem;
-                }
             }
             &__opened &__tech {
                 display: none;
@@ -88,13 +61,6 @@
                 transition: all 0.1s ease;
                 background-color: $component-secondary;
                 padding: 0 3rem;
-
-                @include respond(tab-land) { 
-                    padding: 0 1rem;
-                }
-                @include respond(phone) { 
-                    padding: 0 0.5rem;
-                }
 
                 &:hover {
                     transform: translateY(-0.35rem) translateX(0.35rem);
@@ -117,25 +83,10 @@
                 font-size: 4rem;
                 font-weight: 800;
                 transition: 300ms;
-                @include respond(tab-land) { 
-                    font-size: 2.8rem;
-                }
-                @include respond(tab-port) { 
-                    font-size: 2.3rem;
-                }
-                @include respond(phone) { 
-                    font-size: 1.5rem;
-                }
             }
             &__tech {
                 font-size: 1.5rem;
                 transition: 300ms;
-                @include respond(tab-land) { 
-                    font-size: 1.3rem;
-                }
-                @include respond(phone) { 
-                    font-size: 0.8rem;
-                }
             }
             
         }
@@ -150,10 +101,6 @@
                 top: 0;
                 left: 0;
                 margin: 0 2rem;
-                @include respond(phone) { 
-                    font-size: 0.8rem;
-                    margin: 0;
-                }
             }
             &__date {
                 position: absolute;
@@ -161,22 +108,11 @@
                 right: 0;
                 text-align: right;
                 margin: 0 2rem;
-                @include respond(phone) { 
-                    font-size: 0.8rem;
-                    margin: 0;
-                }
             }
             &__header {
                 margin-top: 2rem;
                 font-size: 6rem;
                 font-weight: 700;
-                @include respond(tab-port) { 
-                    font-size: 3rem;
-                    padding-top: 1rem;
-                }
-                @include respond(phone) { 
-                    font-size: 1.3rem;
-                }
             }
             &__tech {
                 font-size: 2rem;
@@ -190,13 +126,6 @@
                     left: 10%;
                     border-bottom: 3px solid $projects-primary; 
                 }
-                
-                @include respond(tab-port) { 
-                    font-size: 1.5rem;
-                }
-                @include respond(phone) { 
-                    font-size: 0.8rem;
-                }
             }
             &__desc {
                 font-size: 2rem;
@@ -205,18 +134,6 @@
                 text-align: left;
                 line-height: 5rem;
                 text-indent: 3rem;
-                @include respond(tab-port) { 
-                    font-size: 1.7rem;
-                    line-height: 3.5rem;
-                    margin: 1rem;
-                }
-                @include respond(phone) { 
-                    font-size: 1rem;
-                    margin: 0;
-                    padding-top: 1rem;
-                    text-indent: 1rem;
-                    line-height: 2.3rem;
-                }
             }
             &__git {
                 font-size: 2rem;
@@ -228,13 +145,6 @@
                 &__link {
                     @include link($projects-primary);
                 }
-                
-                @include respond(tab-port) { 
-                    font-size: 1.7rem;
-                }
-                @include respond(phone) { 
-                    font-size: 1.5rem;
-                }
             }
             &__res {
                 text-align: left;
@@ -243,11 +153,124 @@
                 & ul {
                     list-style-type: square;
                 }
+            }
+        }
+    }
+}
+
+@include respond(tab-land) { 
+    .projects {
+        &__content {
+            &__tabs {
+                &__opened h2 {
+                    font-size: 2.1rem;
+                }
+                &__opened &__project:hover h2 {
+                    font-size: 2.4rem;
+                }
+                &__project {
+                    padding: 0 1rem;
+                }
+    
+                &__title {
+                    font-size: 2.8rem;
+                }
+                &__tech {
+                    font-size: 1.3rem;
+                }
                 
-                @include respond(tab-port) { 
+            }
+        }
+    }
+}
+@include respond(tab-port) { 
+    .projects {
+        &__content {
+            &__tabs {
+                &__opened h2 {
                     font-size: 1.7rem;
                 }
-                @include respond(phone) { 
+                &__opened &__project:hover h2 {
+                    font-size: 2rem;
+                }
+    
+                &__title {
+                    font-size: 2.3rem;
+                }
+                &__tech {
+                    font-size: 1.3rem;
+                }
+                
+            }
+            &__desc {
+                &__header {
+                    font-size: 3rem;
+                    padding-top: 1rem;
+                }
+                &__tech {
+                    font-size: 1.5rem;
+                }
+                &__desc {
+                    font-size: 1.7rem;
+                    line-height: 3.5rem;
+                    margin: 1rem;
+                }
+                &__git {
+                    font-size: 1.7rem;
+                }
+                &__res {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}
+@include respond(phone) { 
+    .projects {
+        &__content {
+            &__tabs {
+                &__opened h2 {
+                    font-size: 1.5rem;
+                }
+                &__opened &__project:hover h2 {
+                    font-size: 1.7rem;
+                }
+                &__project {
+                    padding: 0 0.5rem;
+                }
+                &__title {
+                    font-size: 1.5rem;
+                }
+                &__tech {
+                    font-size: 0.8rem;
+                } 
+            }
+            &__desc {
+                &__type {
+                    font-size: 0.8rem;
+                    margin: 0;
+                }
+                &__date {
+                    font-size: 0.8rem;
+                    margin: 0;
+                }
+                &__header {
+                    font-size: 1.3rem;
+                }
+                &__tech {
+                    font-size: 0.8rem;
+                }
+                &__desc {
+                    font-size: 1rem;
+                    margin: 0;
+                    padding-top: 1rem;
+                    text-indent: 1rem;
+                    line-height: 2.3rem;
+                }
+                &__git {
+                    font-size: 1.5rem;
+                }
+                &__res {
                     font-size: 1.5rem;
                 }
             }

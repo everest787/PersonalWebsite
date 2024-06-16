@@ -60,11 +60,6 @@
             color: $color-grey-dark-3;
             font-size: 2rem;
             font-weight: 700;
-
-            
-            @include respond(tab-port) { 
-                font-size: 1.5rem;
-            }
         }
 
         &__card {
@@ -110,12 +105,6 @@
                         display: flex;
                         flex-direction: column;
 
-                        @include respond(tab-land) { 
-                            & h3 {
-                                font-size: 2rem;
-                            }
-                        }
-
                         & div {
                             display: grid;
                             grid-template-columns: 1fr 1fr;
@@ -124,22 +113,11 @@
                                 font-size: 2rem;
                                 list-style-type: square;
                                 padding: 1rem 0 0 3rem;
-
-                                @include respond(tab-land) { 
-                                    font-size: 1.5rem;
-                                    padding: 0.5rem 0 0 3rem;
-                                }
                             }
                             & .books {
                                 font-size: 1.8rem;
                                 list-style-type: square;
                                 padding: 1rem 0 0 3rem;
-
-                                @include respond(tab-land) { 
-                                    font-size: 1.3rem;
-                                    padding: 0 0 0 2rem;
-                                }
-
                                 & h3 {
                                     font-size: 1rem;
                                 }
@@ -154,4 +132,44 @@
 
     }
 
+}
+
+@include respond(tab-land) { 
+    .aboutme {
+        &__section {
+            &__card {
+                &__side {
+                    &--back {
+                        &__body {
+                            & h3 {
+                                font-size: 2rem;
+                            }
+                            & div {
+                                & ul {
+                                    font-size: 1.5rem;
+                                    padding: 0.5rem 0 0 3rem;
+                                }
+                                & .books {
+                                    font-size: 1.3rem;
+                                    padding: 0 0 0 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include respond(tab-port) { 
+    .aboutme {
+        &__section {
+            &__heading {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}            
+@include respond(phone) { 
+    
 }
