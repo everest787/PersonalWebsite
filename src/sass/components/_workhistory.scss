@@ -26,6 +26,18 @@
         display: flex;
         flex-direction: column;
         border: 2px solid $work-primary;
+
+        & > div {
+            &:has(~ div:hover){
+                opacity: 0.3;
+            }
+            &:hover ~ div {
+                opacity: 0.3;
+            }
+            &:not(:last-child){
+                border-bottom: 0.3rem solid $work-primary;
+            }
+        }
     }
 
     &__job {
@@ -149,6 +161,27 @@
         &__content {
             font-size: 1.4rem;
         }
+        &__job {
+            &__title {
+                font-size: 2.7rem;
+            }
+            &__stack {
+                & h3 {
+                    font-size: 1.8rem;
+                }
+                &__list {
+                    font-size: 1.5rem;
+                }
+            }
+            &-desc {
+                h3 {
+                    font-size: 1.3rem;
+                }
+                &__list {
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 }
 @include respond(tab-port) { 
@@ -156,13 +189,34 @@
         &__content {
             font-size: 1.3rem;
         }
+        &__job {
+            &__title {
+                font-size: 2.4rem;
+            }
+            &__stack {
+                & h3 {
+                    font-size: 1.5rem;
+                }
+                &__list {
+                    font-size: 1.2rem;
+                }
+            }
+            &-desc {
+                h3 {
+                    font-size: 1rem;
+                }
+                &__list {
+                    font-size: 1.2rem;
+                }
+            }
+        }
     } 
 }
 @include respond(phone) { 
     .workhistory {
         &__job {
             &__title {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
     
                 &__opened {
                     animation: none;
