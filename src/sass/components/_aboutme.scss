@@ -108,9 +108,12 @@
                                 padding: 1rem 0 0 3rem;
                             }
                             & .books {
-                                font-size: 1.8rem;
+                                font-size: 1.6rem;
                                 list-style-type: square;
-                                padding: 1rem 0 0 3rem;
+                                padding: 0.7rem 0 0 3rem;
+                                & li {
+                                    font-size: 1.2rem;
+                                }
                                 & h3 {
                                     font-size: 1rem;
                                 }
