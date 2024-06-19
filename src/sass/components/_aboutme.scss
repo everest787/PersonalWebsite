@@ -26,16 +26,9 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        max-height:100%;
-        max-width: 100%;
-        background: repeating-linear-gradient(
-            45deg,
-            $projects-primary,
-            $projects-primary 2px,
-            $color-grey-light-2 2px,
-            $color-grey-light-2 6px
-        );
+        grid-template-rows: 1fr minmax(1fr, 2fr) 1fr;
+        height: 100%;
+        width: 100%;
         border: 2px solid $about-primary;
     }
     &__section:before {
@@ -171,5 +164,11 @@
     }
 }            
 @include respond(phone) { 
-    
+    .aboutme {
+        &__section {
+            &__heading {
+                font-size: 1.3rem;
+            }
+        }
+    }
 }
