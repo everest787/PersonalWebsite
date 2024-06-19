@@ -26,16 +26,9 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        max-height:100%;
-        max-width: 100%;
-        background: repeating-linear-gradient(
-            45deg,
-            $projects-primary,
-            $projects-primary 2px,
-            $color-grey-light-2 2px,
-            $color-grey-light-2 6px
-        );
+        grid-template-rows: 1fr minmax(1fr, 2fr) 1fr;
+        height: 100%;
+        width: 100%;
         border: 2px solid $about-primary;
     }
     &__section:before {
@@ -100,7 +93,7 @@
                     transform: rotateY(180deg);
     
                     &__body {
-                        font-size: 2.5rem;
+                        font-size: 2.3rem;
                         color: $component-secondary;
                         display: flex;
                         flex-direction: column;
@@ -110,14 +103,17 @@
                             grid-template-columns: 1fr 1fr;
                             text-align: left;
                             & ul {
-                                font-size: 2rem;
+                                font-size: 1.8rem;
                                 list-style-type: square;
                                 padding: 1rem 0 0 3rem;
                             }
                             & .books {
-                                font-size: 1.8rem;
+                                font-size: 1.6rem;
                                 list-style-type: square;
-                                padding: 1rem 0 0 3rem;
+                                padding: 0.7rem 0 0 3rem;
+                                & li {
+                                    font-size: 1.2rem;
+                                }
                                 & h3 {
                                     font-size: 1rem;
                                 }
@@ -141,16 +137,17 @@
                 &__side {
                     &--back {
                         &__body {
+                            font-size: 2rem;
                             & h3 {
                                 font-size: 2rem;
                             }
                             & div {
                                 & ul {
-                                    font-size: 1.5rem;
+                                    font-size: 1.3rem;
                                     padding: 0.5rem 0 0 3rem;
                                 }
                                 & .books {
-                                    font-size: 1.3rem;
+                                    font-size: 1.1rem;
                                     padding: 0 0 0 2rem;
                                 }
                             }
@@ -171,5 +168,11 @@
     }
 }            
 @include respond(phone) { 
-    
+    .aboutme {
+        &__section {
+            &__heading {
+                font-size: 1.3rem;
+            }
+        }
+    }
 }

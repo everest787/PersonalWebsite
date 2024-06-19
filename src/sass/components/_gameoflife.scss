@@ -31,13 +31,6 @@
         width: 100vw;
         padding: 0 30% 1rem;
 
-        @include respond(tab-port) { 
-            padding: 0 30% 1rem 30%;
-        }
-        @include respond(phone) { 
-            padding: 0 20% 1rem 20%;
-        }
-
         &__button {
             width: 10rem;
             height: 4rem;
@@ -80,4 +73,24 @@
     td.live {
         background-color: $color-tertiary;
     }
+}
+@include respond(tab-port) { 
+    .gameoflife {
+        .controls {
+            padding: 0 20% 1rem 20%;
+        }
+    }    
+}
+@include respond(phone) { 
+    .gameoflife {
+        .controls {
+            padding: 0 10% 1rem 10%;
+
+            &__button {
+                width: 7rem;
+                height: 3rem;
+                font-size: 1.5rem;
+            }
+        }
+    }    
 }
