@@ -142,7 +142,7 @@ function Projects() {
                             desc="The intention of the toolkit was to offer a way for VR games to interpret gestures 
                             from a player as either indicative of a target emotion or not, and to relay that information 
                             back to the game as an input. A long short-term memory neural network was used to analyze 
-                            time series data retrieved from VR equipment while players were playing horror games."
+                            time series data retrieved from VR equipment from players."
                             link={false}
                             git={false}
                             date="2020-2021"

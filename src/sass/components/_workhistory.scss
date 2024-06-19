@@ -170,7 +170,7 @@
                     font-size: 1.8rem;
                 }
                 &__list {
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                 }
             }
             &-desc {
@@ -216,7 +216,7 @@
     .workhistory {
         &__job {
             &__title {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
     
                 &__opened {
                     animation: none;
@@ -225,10 +225,12 @@
             }
             &-desc {
                 h3 {
-                    font-size: 1.2rem;
+                    font-size: 0.8rem;
+                    transform: translateY(0.25rem);
                 }
                 &__list {
                     font-size: .8rem;
+                    height: 80%;
                 }
                 & ul {
                     padding: 0 0 0 1.5rem;

@@ -46,10 +46,10 @@
             );
 
             &__opened h2 {
-                font-size: 2.7rem;
+                font-size: 2.5rem;
             }
             &__opened &__project:hover h2 {
-                font-size: 3rem;
+                font-size: 2.7rem;
             }
             &__opened &__tech {
                 display: none;
@@ -72,10 +72,10 @@
                     background-color: $color-grey-light-1;
                     cursor: pointer;
                     & h2 {
-                        font-size: 4.3rem;
+                        font-size: 3.4rem;
                     }
                     & h3 {
-                        font-size: 2.1rem;
+                        font-size: 1.7rem;
                     }
                 }
             }
@@ -85,7 +85,7 @@
             }
 
             &__title {
-                font-size: 4rem;
+                font-size: 3.2rem;
                 font-weight: 800;
                 transition: 300ms;
             }
@@ -192,14 +192,14 @@
             }
             &__desc {
                 &__header {
-                    font-size: 3rem;
+                    font-size: 2.6rem;
                     padding-top: 1rem;
                 }
                 &__tech {
                     font-size: 1.5rem;
                 }
                 &__desc {
-                    font-size: 1.7rem;
+                    font-size: 1.4rem;
                     line-height: 3.5rem;
                     margin: 1rem;
                 }
@@ -241,14 +241,14 @@
             }
             &__desc {
                 &__header {
-                    font-size: 2.8rem;
+                    font-size: 2.4rem;
                 }
                 &__tech {
                     font-size: 1.3rem;
                 }
                 &__desc {
-                    font-size: 1.5rem;
-                    line-height: 3rem;
+                    font-size: 1.3rem;
+                    line-height: 2.7rem;
                 }
                 &__git {
                     font-size: 1.5rem;
@@ -308,14 +308,15 @@
                     margin: 0;
                     padding: 1rem 1rem;
                     text-indent: 1rem;
-                    line-height: 2rem;
+                    line-height: 1.5rem;
                 }
                 &__git {
                     font-size: 1.1rem;
                     margin: 0;
                 }
                 &__res {
-                    font-size: 1.5rem;
+                    font-size: 0.7rem;
+                    margin: 1rem;
                 }
             }
         }

@@ -93,7 +93,7 @@
                     transform: rotateY(180deg);
     
                     &__body {
-                        font-size: 2.5rem;
+                        font-size: 2.3rem;
                         color: $component-secondary;
                         display: flex;
                         flex-direction: column;
@@ -103,7 +103,7 @@
                             grid-template-columns: 1fr 1fr;
                             text-align: left;
                             & ul {
-                                font-size: 2rem;
+                                font-size: 1.8rem;
                                 list-style-type: square;
                                 padding: 1rem 0 0 3rem;
                             }
@@ -134,16 +134,17 @@
                 &__side {
                     &--back {
                         &__body {
+                            font-size: 2rem;
                             & h3 {
                                 font-size: 2rem;
                             }
                             & div {
                                 & ul {
-                                    font-size: 1.5rem;
+                                    font-size: 1.3rem;
                                     padding: 0.5rem 0 0 3rem;
                                 }
                                 & .books {
-                                    font-size: 1.3rem;
+                                    font-size: 1.1rem;
                                     padding: 0 0 0 2rem;
                                 }
                             }
